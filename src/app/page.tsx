@@ -8,11 +8,11 @@ export default function Home() {
   return (
     <main>
       <p className="font-mono text-[20px] text-black dark:text-white font-extrabold tracking-widest mb-6">
-        Hey, I'm Shrey <span className="text-[25px]">🌴</span>
+        Hey, I&apos;m Shrey <span className="text-[25px]">🌴</span>
       </p>
 
       <p className="leading-loose">
-        I'm a sophomore at the University of Massachusetts. I grew up in Dubai
+        I&apos;m a sophomore at the University of Massachusetts. I grew up in Dubai
         and spent my last summer working at Falcon Eye Drones.
       </p>
       <div className="my-8 flex flex-col sm:flex-row space-x-0 sm:space-x-4 space-y-4 sm:space-y-0 w-full">
