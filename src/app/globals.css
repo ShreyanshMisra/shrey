@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-::selection {
-  background-color: #29b3bb;
-  color: #fefefe;
-}
-
 html {
   min-width: 360px;
 }
