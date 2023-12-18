@@ -9,9 +9,9 @@ export const metadata: Metadata = {
 export default async function MorePage() {
   return (
     <section>
-      <h1 className="font-mono text-[20px] text-black dark:text-white font-extrabold tracking-widest mb-6">
-        Coming Soon!
-      </h1>
+      <p className="text-[35px] text-black dark:text-white font-extrabold tracking-widest mb-6">
+        Coming soon
+      </p>
     </section>
   );
 }
