@@ -13,7 +13,7 @@ export default async function ResearchPage() {
       <p className="text-[35px] text-black dark:text-white font-extrabold tracking-widest mb-6">
         Research
       </p>
-      import {TextLink} from "../components/Links";
+ 
       <p className="leading-loose">
         Lab Trainings:
         <ul className="flex flex-col md:flex-row mt-8 space-x-0 md:space-x-4 space-y-2 md:space-y-0 font-sm text-neutral-600 dark:text-neutral-300">
