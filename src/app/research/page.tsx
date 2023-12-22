@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
     return (
-      <main>
+    <section>
         <p className="text-[35px] text-black dark:text-white font-extrabold tracking-widest mb-6">
           Research
         </p>
@@ -27,9 +27,6 @@ export default function Home() {
         <p className="leading-loose">
         Coursework: Programming with Data Structures, Computer Systems, Intro to Computation (Discrete Mathematics), Multivariate Calculus, Linear Algebra, Intro to Kinesiology. 
         </p>
-
-
-
-      </main>
+    </section>
     );
   }
