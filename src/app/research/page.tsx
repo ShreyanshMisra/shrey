@@ -4,11 +4,11 @@ import Link from "next/link";
 
 
 export const metadata: Metadata = {
-  title: "Shreyansh Misra | More",
-  description: "More",
+  title: "Shreyansh Misra | Research",
+  description: "Research",
 };
 
-export default function Home() {
+export default function ResearchPage() {
     return (
     <section>
         <p className="text-[35px] text-black dark:text-white font-extrabold tracking-widest mb-6">
