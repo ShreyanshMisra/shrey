@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import { SocialLink, TextLink } from "./components/Links";
 import Link from "next/link";
+
 
 export const metadata: Metadata = {
   title: "Shreyansh Misra | More",
