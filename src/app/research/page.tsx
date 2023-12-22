@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: "Research",
 };
 
-export default function ResearchPage() {
+export default async function ResearchPage() {
     return (
     <section>
         <p className="text-[35px] text-black dark:text-white font-extrabold tracking-widest mb-6">
