@@ -12,12 +12,18 @@ const navItems = {
   '/more': {
     name: 'more',
   },
+  '/research': {
+    name: 'more',
+  },
 };
 
 export default function Navbar() {
   let pathname = usePathname() || '/';
   if (pathname.includes('/more/')) {
     pathname = '/more';
+  }
+  if (pathname.includes('/research/')) {
+    pathname = '/research';
   }
 
   return (

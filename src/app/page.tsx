@@ -1,7 +1,5 @@
 import Image from "next/image";
 import { SocialLink, TextLink } from "./components/Links";
-import linkedin from "public/icons/linkedin.png";
-import github from "public/icons/github.png";
 
 
 export default function Home() {
