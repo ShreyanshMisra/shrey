@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { SocialLink, TextLink } from "./components/Links";
+import { SocialLink, TextLink } from "./src/app/components";
 import Link from "next/link";
 
 
