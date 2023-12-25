@@ -30,11 +30,11 @@ export default async function ResearchPage() {
         <p className="text-white font-bold">CITI Certifications</p>:
         <TextLink
           text="CITI: Group 1 Biomedical Research"
-          link="https://www.citiprogram.org/verify/?wb505f611-b1da-40de-8107-af5965609667-60195093/"
+          link="https://www.citiprogram.org/verify/?wb505f611-b1da-40de-8107-af5965609667-60195093"
         />
         <TextLink
           text="CITI: Good Clinical Practice"
-          link="https://www.citiprogram.org/verify/?w1f78f978-8daf-40ac-a421-368086a3ceaa-60195095/"
+          link="https://www.citiprogram.org/verify/?w1f78f978-8daf-40ac-a421-368086a3ceaa-60195095"
         />
       </ul>
 
