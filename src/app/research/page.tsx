@@ -13,9 +13,9 @@ export default async function ResearchPage() {
       <p className="text-[35px] text-black dark:text-white font-extrabold tracking-widest mb-6">
         Research Profile
       </p>
-      
+
       <p className="leading-loose mt-8">
-        <span className="font-bold">Interests:</span> I'm interested in data
+        <span className="font-bold">Interests:</span> I&apos;m interested in data
         science and machine learning, especially when applied to areas like
         public health, sports analytics, and the social sciences.
       </p>
