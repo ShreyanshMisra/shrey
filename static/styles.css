@@ -67,6 +67,7 @@ a {
     font-family: 'Lexend Deca', sans-serif;
     text-align: right;
     display: inline-block;
+    margin-bottom: -0.25rem;
   }
 
   .align {
