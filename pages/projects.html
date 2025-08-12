@@ -2,51 +2,171 @@
 <html lang="en">
 
 <head>
-  <title>Shreyansh Misra | Projects</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
-  <link href='https://fonts.googleapis.com/css?family=Lexend Deca' rel='stylesheet'>
-  <link rel="stylesheet" type="text/css" href="/static/styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Lexend+Deca&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Lexend Deca', sans-serif;
+      background-color: #fff;
+      color: #111;
+      margin: 0;
+      padding: 0;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      border: 1px solid #e5e7eb;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      background-color: #fff;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card h3 {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+    }
+
+    .dot {
+      height: 8px;
+      width: 8px;
+      background-color: #22c55e;
+      border-radius: 50%;
+      display: inline-block;
+      margin-left: 0.4rem;
+    }
+
+    .card p {
+      margin: 0.8rem 0 1rem;
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .tag {
+      background-color: #f3f4f6;
+      padding: 0.3rem 0.6rem;
+      font-size: 0.8rem;
+      border-radius: 0.4rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+    }
+  </style>
 </head>
 
 <body>
-  <main class="outer-pd">
-    <section class="content">
-        <div class="navbar">
-            <a href="/index.html">About</a>
-            &nbsp;| &nbsp;
-            <a href="">Projects</a>
-            &nbsp;| &nbsp;
-            <a href="/pages/blog.html">Blog</a>
-          </div>
-        <div class="stuff">
-            <h1>Projects</h1>
-            <hr>
-            <a target="_blank" href="https://github.com/ShreyanshMisra/ufo">
-              <h3>Predicting UFO Sightings with Time Series Models</h3>
-              <p>Using Historical Reports of UFO Sightings to Predict Future Sighting Trends.</p>
-            </div>
-            <a target="_blank" href="https://github.com/ShreyanshMisra/CardioActivityClassification">
-              <h3>Cardio Activity Classification</h3>
-              <p>Classifying Cardio Activities from Sensor Data using Decision Tree Classifiers. </p>
-            </div>
-            <a target="_blank" href="https://github.com/ShreyanshMisra/HeartDiseasePrediction">
-                <h3>Predicting Heart Failure with Machine Learning</h3>
-                <p>Testing the effectiveness of different Machine Learning models at predicting heart failure.</p>
-              </div>
-              <a target="_blank" href="https://github.com/ShreyanshMisra/wordle">
-                <h3>Analyzing Wordle</h3>
-                <p>An exploratory analysis of wordle that focuses on finding the best starter word in the game.</p>
-              </div>
-              <a target="_blank" href="https://github.com/ShreyanshMisra/Efficient-Frontier">
-                <h3>Efficient Frontier Portfolio Optimization</h3>
-                <p>Stock scraping, screening, and portfolio optimization using the efficient frontier in Python.</p>
-              </div>
-          </div>
-    </section>
+  <main>
+    <h1>Projects</h1>
+    <div class="card-grid">
+      <div class="card">
+        <h3>PixelPilot <span class="dot"></span></h3>
+        <p>Cross-platform photo editor with AI-powered filters and instant background removal.</p>
+        <div class="tags">
+          <span class="tag">TypeScript</span>
+          <span class="tag">React</span>
+          <span class="tag">Tailwind CSS</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>FitTrack <span class="dot"></span></h3>
+        <p>Personal fitness tracking app with real-time analytics and wearable integration.</p>
+        <div class="tags">
+          <span class="tag">Kotlin</span>
+          <span class="tag">Firebase</span>
+          <span class="tag">GraphQL</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>BookHive <span class="dot"></span></h3>
+        <p>Social reading platform where users can share reviews, quotes, and book lists.</p>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">Django</span>
+          <span class="tag">PostgreSQL</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>TravelMate <span class="dot"></span></h3>
+        <p>AI-powered trip planner that generates personalized itineraries in seconds.</p>
+        <div class="tags">
+          <span class="tag">Next.js</span>
+          <span class="tag">OpenAI API</span>
+          <span class="tag">Redis</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>TaskForge <span class="dot"></span></h3>
+        <p>Kanban-based project management tool with offline sync and collaboration features.</p>
+        <div class="tags">
+          <span class="tag">Vue.js</span>
+          <span class="tag">Supabase</span>
+          <span class="tag">Tailwind CSS</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>FoodLens <span class="dot"></span></h3>
+        <p>Nutrition analysis app that identifies food from photos and tracks daily intake.</p>
+        <div class="tags">
+          <span class="tag">Swift</span>
+          <span class="tag">CoreML</span>
+          <span class="tag">AWS</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Streamify <span class="dot"></span></h3>
+        <p>Live streaming platform optimized for low-latency broadcasts and interactive chat.</p>
+        <div class="tags">
+          <span class="tag">Go</span>
+          <span class="tag">WebRTC</span>
+          <span class="tag">Docker</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>MindNotes <span class="dot"></span></h3>
+        <p>Note-taking app with AI summarization and smart tagging for easy retrieval.</p>
+        <div class="tags">
+          <span class="tag">React Native</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">MongoDB</span>
+        </div>
+      </div>
+    </div>
   </main>
 </body>
+
 </html>
