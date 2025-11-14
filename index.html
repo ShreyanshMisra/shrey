@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shreyansh Misra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #fafafa;
+            color: #333;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Fixed Sidebar - Left 1/3 */
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 33.333%;
+            height: 100vh;
+            background-color: #fafafa;
+            padding: 80px 40px;
+            border-right: 1px solid #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .sidebar-content {
+            max-width: 280px;
+        }
+
+        .profile-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin-bottom: 24px;
+            object-fit: cover;
+            border: 3px solid #f0f0f0;
+        }
+
+        .sidebar h1 {
+            font-family: 'Crimson Text', Georgia, serif;
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 8px;
+            color: #1a1a1a;
+            line-height: 1.2;
+            white-space: nowrap;
+        }
+
+        .sidebar .title {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 8px;
+            font-weight: 400;
+        }
+
+        .sidebar .affiliation {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 4px;
+        }
+
+        .sidebar .degree {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 20px;
+        }
+
+        .sidebar .email {
+            color: #666;
+            text-decoration: none;
+            display: block;
+            margin: 16px 0;
+            font-size: 0.9rem;
+        }
+
+        .sidebar .email:hover {
+            color: #1a1a1a;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+            justify-content: center;
+        }
+
+        .social-links a {
+            color: #666;
+            transition: color 0.2s;
+            font-size: 1.3rem;
+        }
+
+        .social-links a:hover {
+            color: #1a1a1a;
+        }
+
+        /* Scrollable Content - Right 2/3 */
+        .content {
+            margin-left: 33.333%;
+            width: 66.666%;
+            padding: 80px 60px;
+            background-color: #fafafa;
+        }
+
+        .content section {
+            margin-bottom: 2.5rem;
+        }
+
+        .content h2 {
+            font-family: 'Crimson Text', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+            color: #1a1a1a;
+        }
+
+        .content p {
+            color: #444;
+            margin-bottom: 1rem;
+            font-size: 0.85rem;
+            line-height: 1.7;
+        }
+
+        /* News Section */
+        .news-item {
+            margin-bottom: 0.85rem;
+            color: #444;
+            font-size: 0.85rem;
+            line-height: 1.0;
+        }
+
+        .news-item .date {
+            color: #666;
+            font-weight: 600;
+        }
+
+        /* Projects Section */
+        .project {
+            margin-bottom: 1rem;
+            padding-bottom: 0.85rem;
+        }
+
+        .project:last-child {
+            border-bottom: none;
+        }
+
+        .project h3 {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+            color: #1a1a1a;
+        }
+
+        .project .tech-stack {
+            color: #666;
+            font-size: 0.85rem;
+            margin-bottom: 0.6rem;
+            font-style: italic;
+        }
+
+        .project .description {
+            color: #444;
+            margin-bottom: 0.6rem;
+            font-size: 0.85rem;
+            line-height: 1.7;
+        }
+
+        .project .links a {
+            color: #666;
+            text-decoration: none;
+            margin-right: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .project .links a:hover {
+            color: #1a1a1a;
+            text-decoration: underline;
+        }
+
+        /* Experience Section */
+        .experience {
+            margin-bottom: 2rem;
+        }
+
+        .experience h3 {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin: 0 0 0.2rem 0;
+        }
+
+        .experience .location {
+            font-weight: 400;
+            font-size: 0.85rem;
+        }
+
+        .experience .role-line {
+            color: #444;
+            font-size: 1.05rem;
+            margin: 0;
+        }
+
+        .experience .separator {
+            margin: 0 0.5rem;
+            color: #666;
+            font-size: 0.6rem;
+        }
+
+        .experience .dates {
+            color: #666;
+            font-size: 0.8rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .sidebar {
+                position: relative;
+                width: 100%;
+                height: auto;
+                padding: 50px 30px;
+                border-right: none;
+                border-bottom: 1px solid #e0e0e0;
+            }
+
+            .content {
+                margin-left: 0;
+                width: 100%;
+                padding: 50px 30px;
+            }
+
+            .container {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 640px) {
+            body {
+                font-size: 13px;
+            }
+
+            .sidebar {
+                padding: 40px 20px;
+            }
+
+            .sidebar h1 {
+                font-size: 2rem;
+            }
+
+            .profile-image {
+                width: 150px;
+                height: 150px;
+            }
+
+            .content {
+                padding: 40px 20px;
+            }
+
+            .content h2 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <img src="static/Headshot.png" alt="Shreyansh Misra" class="profile-image">
+                
+                <h1>Shreyansh Misra</h1>
+                <p class="title">Software Engineer and Data Scientist</p>
+                
+                <p class="affiliation">University of Massachusetts, Amherst</p>
+                <p class="degree">B.S.  Data Science and Mathematics</p>
+                
+                <a href="mailto:shreyansh@umass.edu" class="email">shreyansh@umass.edu</a>
+                
+                <div class="social-links">
+                    <a href="public/Shreyansh_Misra_Resume.pdf" target="_blank" aria-label="Resume" title="Resume">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </a>
+                    <a href="https://github.com/shreyanshmisra" target="_blank" aria-label="GitHub" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/shreyanshmisra/" target="_blank" aria-label="LinkedIn" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Scrollable Content -->
+        <main class="content">
+            <section id="about">
+                <h2>About Me</h2>
+                <p>
+                    I'm a Senior studying Data Science and Mathematics at UMass. 
+                    I grew up in Dubai and previously interned at Altair (acquired by Siemens). 
+                </p>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects">
+                <h2>Projects</h2>
+                
+                <div class="project">
+                    <h3>Clause   (HackUMass XIII Best AI Hack)</h3>
+                    <div class="tech-stack">Python, TypeScript, Snowflake, Solana, FastAPI, Gemini API, ElevenLabs API</div>
+                    <p class="description">
+                        AI-powered contract management platform that detects illegal clauses in legal agreements and generated demand letters
+                        with legal citations and damage estimates. 
+                    </p>
+                    <div class="links">
+                        <a href="https://github.com/ShreyanshMisra/Clause_frontend" target="_blank">GitHub →</a>
+                        <a href="#" target="_blank">Live Demo →</a>
+                        <a href="https://devpost.com/software/clause-bu9l74" target="_blank">Devpost →</a>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <h3>Kapok</h3>
+                    <div class="tech-stack">Flutter, Dart, Firebase, MapBox API</div>
+                    <p class="description">
+                        Mobile app for coordinating volunteer disaster relief teams in low-connectivity zones, developed for the National Center for Technology and Dispute Resolution.
+
+
+                    </p>
+                    <div class="links">
+                        <a href="#" target="_blank">Live Demo →</a>
+                        <a href="#" target="_blank">Description →</a>
+                    </div>
+                </div>
+                    
+            </section>
+
+            <!-- Experience Section -->
+            <section id="experience">
+                <h2>Experience</h2>
+
+                <div class="experience">
+                    <h3>Siemens Digital Industries <span class="location">(Boston, MA)</span></h3>
+                    <p class="role-line">Customer Analytics Intern<span class="separator">|</span><span class="dates">May 2025 - August 2025</span></p>
+                </div>
+
+                <div class="experience">
+                    <h3>Altair <span class="location">(Chelmsford, MA)</span></h3>
+                    <p class="role-line">Customer Sucess Intern<span class="separator">|</span><span class="dates">May 2024 - April 2025</span></p>
+                </div>
+
+                <div class="experience">
+                    <h3><a href="https://buildumass.com/" target="_blank" style="color: inherit; text-decoration: none;">BUILD UMass</a> <span class="location">(Amherst, MA)</span></h3>
+                    <p class="role-line">President<span class="separator">|</span><span class="dates">February 2024 - Present</span></p>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
