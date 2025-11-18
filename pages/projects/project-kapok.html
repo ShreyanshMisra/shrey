@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<!-- Kapok Project -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapok - Shreyansh Misra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #fafafa;
+            color: #333;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Fixed Sidebar - Left 1/3 */
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 33.333%;
+            height: 100vh;
+            background-color: #fafafa;
+            padding: 80px 40px;
+            border-right: 1px solid #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .sidebar-content {
+            max-width: 280px;
+        }
+
+        .back-link {
+            position: absolute;
+            top: 30px;
+            left: 40px;
+            color: #666;
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .back-link:hover {
+            color: #1a1a1a;
+        }
+
+        .project-logo {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #e8f5e9;
+            border-radius: 16px;
+            font-size: 3rem;
+        }
+
+        .sidebar h1 {
+            font-family: 'Crimson Text', Georgia, serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #1a1a1a;
+            line-height: 1.2;
+        }
+
+        .sidebar .tagline {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 20px;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
+        .sidebar .tech-stack {
+            color: #666;
+            font-size: 0.85rem;
+            margin-bottom: 24px;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        .sidebar .status-badge {
+            display: inline-block;
+            padding: 6px 12px;
+            background-color: #fff3e0;
+            color: #e65100;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .sidebar .meta-info {
+            color: #666;
+            font-size: 0.85rem;
+            margin-bottom: 4px;
+        }
+
+        .sidebar .meta-label {
+            font-weight: 600;
+            color: #444;
+        }
+
+        /* Scrollable Content - Right 2/3 */
+        .content {
+            margin-left: 33.333%;
+            width: 66.666%;
+            padding: 80px 60px;
+            background-color: #fafafa;
+        }
+
+        .content section {
+            margin-bottom: 2.5rem;
+        }
+
+        .content h2 {
+            font-family: 'Crimson Text', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+            color: #1a1a1a;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 0.4rem;
+        }
+
+        .content h3 {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 1.2rem 0 0.6rem 0;
+            color: #1a1a1a;
+        }
+
+        .content p {
+            color: #444;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        .content ul, .content ol {
+            color: #444;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            line-height: 1.7;
+            padding-left: 1.5rem;
+        }
+
+        .content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .content code {
+            background-color: #f0f0f0;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 0.85rem;
+            color: #c7254e;
+        }
+
+        .content pre {
+            background-color: #f5f5f5;
+            padding: 16px;
+            border-radius: 6px;
+            overflow-x: auto;
+            margin-bottom: 1rem;
+            border: 1px solid #e0e0e0;
+        }
+
+        .content pre code {
+            background-color: transparent;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Feature Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-card {
+            background-color: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .feature-card h4 {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #1a1a1a;
+        }
+
+        .feature-card p {
+            font-size: 0.85rem;
+            margin-bottom: 0;
+        }
+
+        /* Architecture Diagram */
+        .architecture-diagram {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .architecture-diagram img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Screenshots */
+        .screenshots {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .screenshot {
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .screenshot img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 0.5rem;
+        }
+
+        .screenshot-caption {
+            font-size: 0.85rem;
+            color: #666;
+            text-align: center;
+        }
+
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .team-member {
+            text-align: center;
+        }
+
+        .team-member-name {
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 0.2rem;
+        }
+
+        .team-member-role {
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .sidebar {
+                position: relative;
+                width: 100%;
+                height: auto;
+                padding: 50px 30px;
+                border-right: none;
+                border-bottom: 1px solid #e0e0e0;
+            }
+
+            .back-link {
+                top: 20px;
+                left: 30px;
+            }
+
+            .content {
+                margin-left: 0;
+                width: 100%;
+                padding: 50px 30px;
+            }
+
+            .container {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 640px) {
+            body {
+                font-size: 13px;
+            }
+
+            .sidebar {
+                padding: 40px 20px;
+            }
+
+            .back-link {
+                top: 15px;
+                left: 20px;
+            }
+
+            .sidebar h1 {
+                font-size: 1.5rem;
+            }
+
+            .content {
+                padding: 40px 20px;
+            }
+
+            .content h2 {
+                font-size: 1.3rem;
+            }
+
+            .features-grid,
+            .screenshots,
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <a href="../../index.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Portfolio
+            </a>
+            <div class="sidebar-content">
+                <div class="project-logo">
+                    <i class="fas fa-hands-helping"></i>
+                </div>
+
+                <h1>Kapok</h1>
+                <p class="tagline">Offline-first disaster relief volunteer coordination platform</p>
+
+                <span class="status-badge">In Development</span>
+
+                <div class="tech-stack">
+                    Flutter · Dart · Firebase · Firestore · Mapbox · Hive · BLoC Pattern · GetIt
+                </div>
+
+                <p class="meta-info"><span class="meta-label">Client:</span> National Center for Technology and Dispute Resolution</p>
+                <p class="meta-info"><span class="meta-label">Platform:</span> Android & iOS</p>
+                <p class="meta-info"><span class="meta-label">Languages:</span> English & Spanish</p>
+            </div>
+        </aside>
+
+        <!-- Scrollable Content -->
+        <main class="content">
+            <section id="overview">
+                <h2>Overview</h2>
+                <p>
+                    Kapok is a mobile-first disaster relief application built for the National Center for Technology and Dispute Resolution (NCTDR). The platform enables efficient coordination of volunteer teams during emergency response operations, with full functionality even in areas with limited or no internet connectivity.
+                </p>
+                <p>
+                    Designed specifically for scenarios like hurricanes, earthquakes, and floods, Kapok provides disaster relief coordinators and volunteers with tools to manage tasks, organize teams, track locations, and communicate effectively during critical response operations.
+                </p>
+            </section>
+
+            <section id="problem">
+                <h2>Problem Statement</h2>
+                <p>
+                    During disaster relief operations, coordination teams face unique challenges that traditional project management tools cannot address:
+                </p>
+                <ul>
+                    <li>Unreliable or non-existent internet connectivity in disaster zones prevents real-time coordination</li>
+                    <li>Volunteers with diverse specializations (medical, engineering, construction) need to be matched with appropriate tasks</li>
+                    <li>Geographic distribution of tasks requires visual mapping and location-based assignment</li>
+                    <li>Multi-lingual teams need seamless communication across language barriers</li>
+                    <li>Time-sensitive nature of disaster response demands immediate task creation and updates without network delays</li>
+                    <li>Existing tools lack role-based permissions needed for hierarchical disaster response teams</li>
+                </ul>
+            </section>
+
+            <section id="features">
+                <h2>Key Features</h2>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h4><i class="fas fa-wifi-slash"></i> Offline-First Architecture</h4>
+                        <p>Full functionality without internet connectivity using local Hive database with automatic background sync when online.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4><i class="fas fa-tasks"></i> Task Management</h4>
+                        <p>Create, assign, and track disaster relief tasks with severity levels (1-5) and geolocation support for precise coordination.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4><i class="fas fa-users"></i> Team Organization</h4>
+                        <p>Three-tier role system (Admin, Team Leader, Team Member) with unique team codes and role-based access control.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4><i class="fas fa-map-marked-alt"></i> Interactive Mapping</h4>
+                        <p>Real-time Mapbox integration visualizing tasks and team locations with offline map support for disconnected areas.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4><i class="fas fa-user-md"></i> Specialization Matching</h4>
+                        <p>Match volunteers with tasks based on skills: Medical, Engineering, Carpentry, Plumbing, Construction, Electrical, and more.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4><i class="fas fa-language"></i> Multi-Language Support</h4>
+                        <p>Full English and Spanish localization with dynamic language switching for diverse volunteer teams.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="architecture">
+                <h2>Technical Architecture</h2>
+
+                <h3>System Design</h3>
+                <p>
+                    Kapok follows Clean Architecture principles with clear separation between presentation, data, and core layers:
+                </p>
+                <ul>
+                    <li><strong>Presentation Layer:</strong> Feature-based modules (auth, tasks, teams, map, profile) using BLoC pattern for predictable state management</li>
+                    <li><strong>Data Layer:</strong> Repository pattern abstracting Firebase and Hive data sources with automatic conflict resolution</li>
+                    <li><strong>Core Layer:</strong> Shared utilities, constants, services (Firebase, Hive, Geolocation), and internationalization support</li>
+                </ul>
+
+                <h3>Offline-First Strategy</h3>
+                <p>The application implements a sophisticated offline-first approach:</p>
+                <ul>
+                    <li><strong>Local-First Storage:</strong> All data written to Hive local database first, ensuring immediate UI updates without network dependency</li>
+                    <li><strong>Optimistic Updates:</strong> User actions reflect instantly in the UI while background sync handles Firebase synchronization</li>
+                    <li><strong>Sync Queue Management:</strong> Pending operations tracked and automatically synced when connectivity restored</li>
+                    <li><strong>Conflict Resolution:</strong> Last-write-wins strategy with timestamps for handling concurrent edits across devices</li>
+                    <li><strong>Network Awareness:</strong> Real-time connectivity monitoring with UI indicators showing offline state</li>
+                </ul>
+
+                <h3>Key Technical Decisions</h3>
+                <ul>
+                    <li><strong>Flutter over Native:</strong> Cross-platform development reduces time-to-market by 60% while maintaining native performance</li>
+                    <li><strong>BLoC over Provider:</strong> Predictable state management with clear separation of business logic from UI, improving testability</li>
+                    <li><strong>Hive over SQLite:</strong> NoSQL document storage better suited for offline-first architecture with faster read/write operations</li>
+                    <li><strong>Firebase over Custom Backend:</strong> Backend-as-a-Service reduces infrastructure complexity while providing authentication, database, and storage</li>
+                    <li><strong>Mapbox over Google Maps:</strong> Superior offline capabilities and customization options essential for disaster zones</li>
+                    <li><strong>GetIt for DI:</strong> Lightweight dependency injection enabling loose coupling and easy testing with mock implementations</li>
+                </ul>
+
+                <h3>Data Flow</h3>
+                <p>
+                    The application follows distinct data flow patterns for online and offline scenarios:
+                </p>
+                <p><strong>Online Flow:</strong> UI → BLoC → Repository → Firebase Source → Firebase (with Hive caching)</p>
+                <p><strong>Offline Flow:</strong> UI → BLoC → Repository → Hive Source → Hive (with Sync Queue for later upload)</p>
+            </section>
+
+            <section id="implementation">
+                <h2>Implementation Details</h2>
+
+                <h3>Feature-Based Architecture</h3>
+                <p>
+                    Each feature module follows a consistent structure for maintainability:
+                </p>
+                <pre><code>features/{feature_name}/
+├── bloc/              # State management
+│   ├── {feature}_bloc.dart
+│   ├── {feature}_event.dart
+│   └── {feature}_state.dart
+├── pages/             # UI screens
+└── widgets/           # Reusable components</code></pre>
+
+                <h3>State Management with BLoC</h3>
+                <p>
+                    Business Logic Component pattern provides predictable state management:
+                </p>
+                <ul>
+                    <li>Events trigger state changes through well-defined business logic</li>
+                    <li>States represent discrete application states (initial, loading, success, error)</li>
+                    <li>UI rebuilds only when state changes, optimizing performance</li>
+                    <li>Clear separation enables independent testing of business logic</li>
+                </ul>
+
+                <h3>Dependency Injection</h3>
+                <p>
+                    GetIt container manages service lifecycle and dependencies:
+                </p>
+                <pre><code>// Service registration
+sl.registerLazySingleton<FirebaseService>(
+  () => FirebaseService.instance
+);
+
+// Repository registration
+sl.registerLazySingleton<TaskRepository>(
+  () => TaskRepository()
+);
+
+// BLoC registration (factory for new instances)
+sl.registerFactory<TaskBloc>(
+  () => TaskBloc()
+);</code></pre>
+
+                <h3>Internationalization</h3>
+                <p>
+                    Complete English and Spanish localization with ARB files:
+                </p>
+                <ul>
+                    <li>Dynamic language switching without app restart</li>
+                    <li>Context-aware translations for technical terms</li>
+                    <li>Fallback to English for missing translations</li>
+                    <li>Future-ready architecture for additional languages</li>
+                </ul>
+            </section>
+
+            <section id="challenges">
+                <h2>Technical Challenges & Solutions</h2>
+
+                <h3>Challenge: Offline Data Synchronization</h3>
+                <p>
+                    <strong>Problem:</strong> Ensuring data consistency when multiple team members edit the same tasks offline, then sync when reconnected.
+                </p>
+                <p>
+                    <strong>Solution:</strong> Implemented last-write-wins conflict resolution with timestamps. Each data modification includes server timestamp from Firebase. When conflicts detected during sync, most recent timestamp wins. Critical operations (team changes, role assignments) sync immediately when online to prevent conflicts.
+                </p>
+
+                <h3>Challenge: Battery Optimization with Location Tracking</h3>
+                <p>
+                    <strong>Problem:</strong> Continuous location tracking for team coordination drains device battery rapidly during extended disaster response operations.
+                </p>
+                <p>
+                    <strong>Solution:</strong> Implemented adaptive location tracking adjusting update frequency based on movement. Stationary devices reduce update frequency from every 30 seconds to every 5 minutes. Geofencing triggers more frequent updates only when volunteers enter task areas. Background location updates use low-power mode when app not in foreground.
+                </p>
+
+                <h3>Challenge: Large Offline Map Storage</h3>
+                <p>
+                    <strong>Problem:</strong> Offline maps for disaster areas can exceed device storage capacity, especially for large geographic regions.
+                </p>
+                <p>
+                    <strong>Solution:</strong> Implemented intelligent map caching strategy. Only cache map tiles for task areas and predetermined evacuation routes. Use Mapbox's vector tiles for 75% smaller file sizes compared to raster images. Allow users to control offline region size with visual feedback on storage requirements. Automatic cleanup of unused cached areas after 30 days.
+                </p>
+
+                <h3>Challenge: Cross-Platform Consistency</h3>
+                <p>
+                    <strong>Problem:</strong> Ensuring identical user experience and functionality across Android and iOS platforms with different native behaviors.
+                </p>
+                <p>
+                    <strong>Solution:</strong> Leveraged Flutter's Material Design 3 for consistent UI across platforms. Created platform-specific adapters for native features (permissions, notifications) using conditional imports. Comprehensive testing on both platforms ensures feature parity. Custom theming maintains brand consistency while respecting platform conventions.
+                </p>
+            </section>
+
+            <section id="development">
+                <h2>Development Phases</h2>
+
+                <h3>Phase 1: Foundation (Completed)</h3>
+                <ul>
+                    <li>Project setup with clean architecture structure</li>
+                    <li>Core models and service implementations</li>
+                    <li>Firebase integration (Authentication, Firestore, Storage)</li>
+                    <li>Basic UI framework with Material Design 3</li>
+                </ul>
+
+                <h3>Phase 2: Authentication & Teams (Current)</h3>
+                <ul>
+                    <li>User authentication system with role-based access</li>
+                    <li>Team creation and management workflows</li>
+                    <li>Unique team code generation and joining mechanism</li>
+                    <li>Role-based permission enforcement across features</li>
+                </ul>
+
+                <h3>Phase 3: Task Management & Mapping (Upcoming)</h3>
+                <ul>
+                    <li>Complete CRUD operations for tasks</li>
+                    <li>Mapbox integration with custom styling</li>
+                    <li>Geolocation services and address conversion</li>
+                    <li>Task creation via map interaction (tap-to-create)</li>
+                </ul>
+
+                <h3>Phase 4: Offline Sync & Background Services</h3>
+                <ul>
+                    <li>Complete offline-first implementation</li>
+                    <li>Background data synchronization workers</li>
+                    <li>Conflict resolution and merge strategies</li>
+                    <li>Network quality assessment and adaptive behavior</li>
+                </ul>
+
+                <h3>Phase 5: UI Polish & Localization</h3>
+                <ul>
+                    <li>Language toggle implementation throughout app</li>
+                    <li>Comprehensive UI/UX improvements based on testing</li>
+                    <li>Performance optimization and memory management</li>
+                    <li>Accessibility features for diverse users</li>
+                </ul>
+
+                <h3>Phase 6: Advanced Features</h3>
+                <ul>
+                    <li>Firebase Cloud Functions for backend automation</li>
+                    <li>Push notifications for critical task assignments</li>
+                    <li>Analytics and reporting dashboards</li>
+                    <li>Export capabilities for post-operation analysis</li>
+                </ul>
+            </section>
+
+            <section id="learnings">
+                <h2>Key Learnings</h2>
+                <ul>
+                    <li><strong>Offline-first is complex but essential:</strong> Building true offline-first requires careful architecture planning from day one. Retrofitting offline capabilities is significantly harder than designing for it initially.</li>
+                    <li><strong>Clean architecture pays dividends:</strong> Strict separation of concerns makes testing easier and allows parallel development of features without conflicts.</li>
+                    <li><strong>User research in target environment:</strong> Understanding disaster response workflows through NCTDR stakeholder interviews revealed requirements traditional project management couldn't address.</li>
+                    <li><strong>Battery life matters in emergencies:</strong> Volunteers can't recharge devices during extended operations. Optimizing for battery life is as important as feature richness.</li>
+                    <li><strong>Cross-platform testing is non-negotiable:</strong> Flutter's "write once, run anywhere" promise requires thorough testing on both platforms to catch platform-specific issues.</li>
+                    <li><strong>Localization beyond translation:</strong> Spanish localization revealed cultural differences in disaster response terminology requiring consultation with bilingual coordinators.</li>
+                </ul>
+            </section>
+
+            <section id="future">
+                <h2>Future Enhancements</h2>
+                <p>Planned improvements for post-launch iterations:</p>
+                <ul>
+                    <li>Mesh networking capabilities for device-to-device communication when infrastructure completely unavailable</li>
+                    <li>Voice-based task creation using speech recognition for hands-free operation during active response</li>
+                    <li>Photo documentation with automatic geotag and timestamp for damage assessment</li>
+                    <li>Resource inventory management tracking supplies (food, water, medical equipment) across distribution points</li>
+                    <li>Integration with emergency services APIs for real-time hazard information</li>
+                    <li>Machine learning for task priority recommendations based on historical disaster response data</li>
+                    <li>Volunteer skill assessment and automatic task matching based on certifications and experience</li>
+                    <li>Multi-organization coordination for large-scale disasters requiring collaboration between NGOs</li>
+                </ul>
+            </section>
+
+            <section id="impact">
+                <h2>Expected Impact</h2>
+                <p>
+                    Upon deployment, Kapok is expected to significantly improve disaster response coordination:
+                </p>
+                <ul>
+                    <li>Reduce coordination overhead by 40% through automated task assignment and status tracking</li>
+                    <li>Improve response time by enabling real-time task creation and updates even without connectivity</li>
+                    <li>Increase volunteer efficiency through specialization-based task matching</li>
+                    <li>Enhance communication across multi-lingual teams with built-in translation</li>
+                    <li>Provide better situational awareness through geographic visualization of all active tasks</li>
+                    <li>Enable data-driven post-operation analysis for continuous improvement of response protocols</li>
+                </ul>
+            </section>
+
+            <section id="tech-stack">
+                <h2>Complete Tech Stack</h2>
+
+                <h3>Mobile Development</h3>
+                <ul>
+                    <li><strong>Framework:</strong> Flutter (Dart) for cross-platform mobile development</li>
+                    <li><strong>UI/UX:</strong> Material Design 3 with custom theming</li>
+                    <li><strong>State Management:</strong> BLoC Pattern with flutter_bloc package</li>
+                    <li><strong>Dependency Injection:</strong> GetIt for service container</li>
+                    <li><strong>Code Generation:</strong> JSON Serialization, Build Runner</li>
+                </ul>
+
+                <h3>Backend & Database</h3>
+                <ul>
+                    <li><strong>Backend Platform:</strong> Firebase (Backend-as-a-Service)</li>
+                    <li><strong>Authentication:</strong> Firebase Auth with email/password and social providers</li>
+                    <li><strong>Cloud Database:</strong> Cloud Firestore for real-time NoSQL document storage</li>
+                    <li><strong>File Storage:</strong> Firebase Storage for user uploads and media</li>
+                    <li><strong>Local Database:</strong> Hive NoSQL for offline-first functionality</li>
+                </ul>
+
+                <h3>Mapping & Location</h3>
+                <ul>
+                    <li><strong>Interactive Maps:</strong> Mapbox GL for vector-based mapping</li>
+                    <li><strong>Location Services:</strong> Geolocator for GPS coordinates and tracking</li>
+                    <li><strong>Geocoding:</strong> Address and coordinate conversion services</li>
+                    <li><strong>Offline Maps:</strong> Mapbox offline capabilities for disconnected operation</li>
+                </ul>
+
+                <h3>Internationalization</h3>
+                <ul>
+                    <li><strong>Localization:</strong> Flutter intl package with ARB files</li>
+                    <li><strong>Supported Languages:</strong> English (en), Spanish (es)</li>
+                    <li><strong>Dynamic Switching:</strong> Runtime language changes without restart</li>
+                </ul>
+
+                <h3>Development & Testing</h3>
+                <ul>
+                    <li><strong>Code Quality:</strong> Flutter Lints for style enforcement</li>
+                    <li><strong>Testing:</strong> Unit tests, widget tests, integration tests</li>
+                    <li><strong>Version Control:</strong> Git with feature branch workflow</li>
+                    <li><strong>CI/CD:</strong> Automated builds and testing pipeline</li>
+                </ul>
+
+                <h3>Deployment</h3>
+                <ul>
+                    <li><strong>Primary Platform:</strong> Android (APK and AAB builds)</li>
+                    <li><strong>Secondary Platform:</strong> iOS (IPA builds for App Store)</li>
+                    <li><strong>Distribution:</strong> Google Play Store and Apple App Store</li>
+                </ul>
+            </section>
+
+            <section id="client">
+                <h2>Client & Collaboration</h2>
+                <p>
+                    Kapok is being developed for the National Center for Technology and Dispute Resolution (NCTDR), a nonprofit organization dedicated to improving access to justice and conflict resolution through technology.
+                </p>
+                <p>
+                    The project involves close collaboration with disaster response coordinators who have firsthand experience managing volunteer teams during hurricanes, floods, and other emergencies. Their insights into real-world challenges have been invaluable in shaping features and prioritizing development.
+                </p>
+                <p>
+                    Regular feedback sessions with NCTDR stakeholders ensure the application meets the practical needs of disaster response operations while maintaining technical excellence and usability for volunteers with varying levels of technical proficiency.
+                </p>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
