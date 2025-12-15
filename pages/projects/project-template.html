@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<!-- Project Template -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Name - Shreyansh Misra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #fafafa;
+            color: #333;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Fixed Sidebar - Left 1/3 */
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 33.333%;
+            height: 100vh;
+            background-color: #fafafa;
+            padding: 80px 40px;
+            border-right: 1px solid #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .sidebar-content {
+            max-width: 280px;
+        }
+
+        .back-link {
+            position: absolute;
+            top: 30px;
+            left: 40px;
+            color: #666;
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .back-link:hover {
+            color: #1a1a1a;
+        }
+
+        .project-logo {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f0f0f0;
+            border-radius: 16px;
+            font-size: 3rem;
+        }
+
+        .sidebar h1 {
+            font-family: 'Crimson Text', Georgia, serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #1a1a1a;
+            line-height: 1.2;
+        }
+
+        .sidebar .tagline {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 20px;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
+        .sidebar .tech-stack {
+            color: #666;
+            font-size: 0.85rem;
+            margin-bottom: 24px;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        .sidebar .status-badge {
+            display: inline-block;
+            padding: 6px 12px;
+            background-color: #e8f5e9;
+            color: #2e7d32;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .sidebar .meta-info {
+            color: #666;
+            font-size: 0.85rem;
+            margin-bottom: 4px;
+        }
+
+        .sidebar .meta-label {
+            font-weight: 600;
+            color: #444;
+        }
+
+        /* Scrollable Content - Right 2/3 */
+        .content {
+            margin-left: 33.333%;
+            width: 66.666%;
+            padding: 80px 60px;
+            background-color: #fafafa;
+        }
+
+        .content section {
+            margin-bottom: 2.5rem;
+        }
+
+        .content h2 {
+            font-family: 'Crimson Text', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+            color: #1a1a1a;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 0.4rem;
+        }
+
+        .content h3 {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 1.2rem 0 0.6rem 0;
+            color: #1a1a1a;
+        }
+
+        .content p {
+            color: #444;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        .content ul, .content ol {
+            color: #444;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            line-height: 1.7;
+            padding-left: 1.5rem;
+        }
+
+        .content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .content code {
+            background-color: #f0f0f0;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 0.85rem;
+            color: #c7254e;
+        }
+
+        .content pre {
+            background-color: #f5f5f5;
+            padding: 16px;
+            border-radius: 6px;
+            overflow-x: auto;
+            margin-bottom: 1rem;
+            border: 1px solid #e0e0e0;
+        }
+
+        .content pre code {
+            background-color: transparent;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Feature Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-card {
+            background-color: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .feature-card h4 {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #1a1a1a;
+        }
+
+        .feature-card p {
+            font-size: 0.85rem;
+            margin-bottom: 0;
+        }
+
+        /* Architecture Diagram */
+        .architecture-diagram {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .architecture-diagram img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Screenshots */
+        .screenshots {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .screenshot {
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .screenshot img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 0.5rem;
+        }
+
+        .screenshot-caption {
+            font-size: 0.85rem;
+            color: #666;
+            text-align: center;
+        }
+
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .team-member {
+            text-align: center;
+        }
+
+        .team-member-name {
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 0.2rem;
+        }
+
+        .team-member-role {
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .sidebar {
+                position: relative;
+                width: 100%;
+                height: auto;
+                padding: 50px 30px;
+                border-right: none;
+                border-bottom: 1px solid #e0e0e0;
+            }
+
+            .back-link {
+                top: 20px;
+                left: 30px;
+            }
+
+            .content {
+                margin-left: 0;
+                width: 100%;
+                padding: 50px 30px;
+            }
+
+            .container {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 640px) {
+            body {
+                font-size: 13px;
+            }
+
+            .sidebar {
+                padding: 40px 20px;
+            }
+
+            .back-link {
+                top: 15px;
+                left: 20px;
+            }
+
+            .sidebar h1 {
+                font-size: 1.5rem;
+            }
+
+            .content {
+                padding: 40px 20px;
+            }
+
+            .content h2 {
+                font-size: 1.3rem;
+            }
+
+            .features-grid,
+            .screenshots,
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <a href="../../index.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Portfolio
+            </a>
+            <div class="sidebar-content">
+                <div class="project-logo">
+                    <i class="fas fa-rocket"></i>
+                </div>
+
+                <h1>DataFlow Analytics</h1>
+                <p class="tagline">Real-time data pipeline orchestration platform for enterprise analytics</p>
+
+                <span class="status-badge">In Production</span>
+
+                <div class="tech-stack">
+                    Python · FastAPI · React · PostgreSQL · Redis · Docker · Kubernetes · Apache Kafka
+                </div>
+
+                <p class="meta-info"><span class="meta-label">Duration:</span> Jan 2024 - Dec 2024</p>
+                <p class="meta-info"><span class="meta-label">Team Size:</span> 6 engineers</p>
+                <p class="meta-info"><span class="meta-label">Role:</span> Lead Backend Developer</p>
+            </div>
+        </aside>
+
+        <!-- Scrollable Content -->
+        <main class="content">
+            <section id="overview">
+                <h2>Overview</h2>
+                <p>
+                    DataFlow Analytics is a proprietary enterprise-grade data pipeline orchestration platform designed to handle real-time analytics for Fortune 500 clients. The system processes over 2 million events per second with sub-100ms latency, enabling businesses to make data-driven decisions in real-time.
+                </p>
+                <p>
+                    Built for a major financial services client, this platform replaced their legacy batch processing system, reducing data processing time from 24 hours to near real-time while improving accuracy by 40%.
+                </p>
+            </section>
+
+            <section id="problem">
+                <h2>Problem Statement</h2>
+                <p>
+                    Financial institutions need to process massive volumes of transaction data in real-time to detect fraud, assess risk, and provide customer insights. Traditional batch processing systems introduce unacceptable delays and cannot scale to meet modern demands.
+                </p>
+                <p>
+                    The client's existing infrastructure faced:
+                </p>
+                <ul>
+                    <li>24-hour delays in data availability, limiting fraud detection capabilities</li>
+                    <li>Inability to scale beyond 500K transactions per hour</li>
+                    <li>Data inconsistencies due to manual intervention in pipeline failures</li>
+                    <li>High operational costs from maintaining legacy on-premise infrastructure</li>
+                    <li>Limited visibility into data quality and pipeline health</li>
+                </ul>
+            </section>
+
+            <section id="features">
+                <h2>Key Features</h2>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h4><i class="fas fa-bolt"></i> Real-time Processing</h4>
+                        <p>Processes 2M+ events per second with sub-100ms latency using distributed stream processing architecture.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4><i class="fas fa-chart-line"></i> Auto-scaling</h4>
+                        <p>Dynamic resource allocation based on load patterns, reducing infrastructure costs by 60% during off-peak hours.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4><i class="fas fa-shield-alt"></i> Fault Tolerance</h4>
+                        <p>Automatic recovery and replay mechanisms ensure zero data loss even during system failures.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4><i class="fas fa-project-diagram"></i> Visual Pipeline Builder</h4>
+                        <p>Drag-and-drop interface for creating complex data transformations without writing code.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4><i class="fas fa-bell"></i> Smart Monitoring</h4>
+                        <p>ML-powered anomaly detection alerts teams before issues impact downstream systems.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4><i class="fas fa-lock"></i> Enterprise Security</h4>
+                        <p>End-to-end encryption, role-based access control, and comprehensive audit logging.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="architecture">
+                <h2>Technical Architecture</h2>
+
+                <h3>System Design</h3>
+                <p>
+                    The platform employs a microservices architecture with event-driven communication patterns:
+                </p>
+                <ul>
+                    <li><strong>Ingestion Layer:</strong> Apache Kafka clusters handle high-throughput data ingestion with partitioning for parallelism</li>
+                    <li><strong>Processing Layer:</strong> FastAPI services orchestrate data transformations, running in Kubernetes pods for horizontal scalability</li>
+                    <li><strong>Storage Layer:</strong> TimescaleDB for time-series analytics, Redis for caching, and S3 for long-term archival</li>
+                    <li><strong>API Layer:</strong> GraphQL interface providing flexible data access patterns for downstream consumers</li>
+                    <li><strong>Monitoring Layer:</strong> Prometheus + Grafana for metrics, ELK stack for centralized logging</li>
+                </ul>
+
+                <h3>Key Technical Decisions</h3>
+                <ul>
+                    <li><strong>Kafka over RabbitMQ:</strong> Selected for superior throughput (1M+ msgs/sec) and built-in partitioning</li>
+                    <li><strong>FastAPI over Flask:</strong> Async capabilities reduced latency by 40%, automatic API documentation improved developer experience</li>
+                    <li><strong>TimescaleDB over MongoDB:</strong> Time-series optimizations provided 10x faster analytics queries for financial data</li>
+                    <li><strong>Kubernetes over ECS:</strong> Better multi-cloud portability and richer ecosystem for CI/CD tooling</li>
+                </ul>
+
+                <h3>Performance Optimizations</h3>
+                <ul>
+                    <li>Implemented connection pooling reducing database overhead by 70%</li>
+                    <li>Added Redis caching layer for frequently accessed reference data (99% hit rate)</li>
+                    <li>Optimized Kafka consumer group configurations for balanced partition assignment</li>
+                    <li>Used batch processing for bulk database operations, improving throughput by 5x</li>
+                </ul>
+            </section>
+
+            <section id="implementation">
+                <h2>Implementation Details</h2>
+
+                <h3>Data Ingestion Pipeline</h3>
+                <p>
+                    Built a multi-stage ingestion pipeline handling various data formats (JSON, Avro, Protobuf):
+                </p>
+                <pre><code># Simplified example of the ingestion service
+@app.post("/ingest/events")
+async def ingest_events(events: List[Event], producer: KafkaProducer):
+    validated_events = await validate_schema(events)
+    enriched_events = await enrich_with_metadata(validated_events)
+
+    await producer.send_batch(
+        topic="raw-events",
+        messages=enriched_events,
+        partition_key=lambda e: e.customer_id
+    )
+
+    return {"status": "success", "count": len(events)}</code></pre>
+
+                <h3>Stream Processing</h3>
+                <p>
+                    Developed custom stream processing workers using asyncio for concurrent processing:
+                </p>
+                <ul>
+                    <li>Windowed aggregations for rolling metrics (5-min, 1-hour, 24-hour windows)</li>
+                    <li>Stateful transformations maintaining customer context across events</li>
+                    <li>Complex event processing for pattern detection in transaction sequences</li>
+                    <li>Dead letter queue handling for failed processing with exponential backoff</li>
+                </ul>
+
+                <h3>API Design</h3>
+                <p>
+                    Implemented a GraphQL API supporting complex query patterns:
+                </p>
+                <ul>
+                    <li>Field-level caching for optimized nested queries</li>
+                    <li>DataLoader pattern preventing N+1 query problems</li>
+                    <li>Subscription support for real-time data push to dashboards</li>
+                    <li>Rate limiting and query complexity analysis for protection</li>
+                </ul>
+            </section>
+
+            <section id="challenges">
+                <h2>Technical Challenges & Solutions</h2>
+
+                <h3>Challenge: Managing Exactly-Once Semantics</h3>
+                <p>
+                    <strong>Problem:</strong> Financial data requires exactly-once processing guarantees to prevent duplicate transactions.
+                </p>
+                <p>
+                    <strong>Solution:</strong> Implemented idempotency keys and transactional outbox pattern. Used Kafka's transactional API with PostgreSQL's advisory locks to ensure atomic commits across message broker and database.
+                </p>
+
+                <h3>Challenge: Handling Late-Arriving Data</h3>
+                <p>
+                    <strong>Problem:</strong> Network delays caused events to arrive out-of-order, affecting windowed aggregations.
+                </p>
+                <p>
+                    <strong>Solution:</strong> Implemented watermarking strategy with configurable lateness tolerance (5 minutes). Used TimescaleDB's continuous aggregates to automatically recompute affected windows.
+                </p>
+
+                <h3>Challenge: Zero-Downtime Deployments</h3>
+                <p>
+                    <strong>Problem:</strong> System needed to maintain 99.99% uptime during deployments.
+                </p>
+                <p>
+                    <strong>Solution:</strong> Blue-green deployment strategy with Kafka consumer group rebalancing. Implemented graceful shutdown hooks allowing in-flight messages to complete before pod termination.
+                </p>
+
+                <h3>Challenge: Data Quality Monitoring</h3>
+                <p>
+                    <strong>Problem:</strong> Detecting data quality issues before they propagated to downstream analytics.
+                </p>
+                <p>
+                    <strong>Solution:</strong> Built statistical profiling system tracking data distributions. ML model trained on historical patterns flags anomalies (sudden null rate changes, outlier values, schema drift).
+                </p>
+            </section>
+
+            <section id="results">
+                <h2>Results & Impact</h2>
+
+                <h3>Performance Metrics</h3>
+                <ul>
+                    <li><strong>99.99% uptime</strong> over 12 months of production operation</li>
+                    <li><strong>2.3M events/second</strong> peak throughput during high-volume trading hours</li>
+                    <li><strong>85ms p95 latency</strong> for end-to-end data pipeline processing</li>
+                    <li><strong>Zero data loss</strong> across 500B+ processed events</li>
+                    <li><strong>60% cost reduction</strong> compared to legacy system infrastructure</li>
+                </ul>
+
+                <h3>Business Impact</h3>
+                <ul>
+                    <li>Enabled real-time fraud detection, reducing losses by $4.2M annually</li>
+                    <li>Improved customer experience with instant transaction confirmations</li>
+                    <li>Empowered data science team with fresh data, reducing model training cycles from weeks to hours</li>
+                    <li>Eliminated 15+ hours/week of manual data quality checks through automation</li>
+                </ul>
+
+                <h3>Technical Achievements</h3>
+                <ul>
+                    <li>Successfully migrated 500TB of historical data without disrupting operations</li>
+                    <li>Reduced time-to-insight from 24 hours to near-real-time</li>
+                    <li>Improved data accuracy by 40% through automated validation</li>
+                    <li>Enabled self-service analytics, reducing data engineering bottlenecks</li>
+                </ul>
+            </section>
+
+            <section id="learnings">
+                <h2>Key Learnings</h2>
+                <ul>
+                    <li><strong>Start with observability:</strong> Comprehensive monitoring from day one enabled quick issue resolution. Invest in tracing, metrics, and logging infrastructure early.</li>
+                    <li><strong>Design for failure:</strong> Circuit breakers, retry policies, and fallback mechanisms are not optional. Every external dependency will fail eventually.</li>
+                    <li><strong>Load test religiously:</strong> Production traffic patterns revealed bottlenecks missed in development. Regular load testing against production-like scenarios is essential.</li>
+                    <li><strong>Documentation as code:</strong> Auto-generated API docs and architecture diagrams stayed up-to-date and reduced onboarding time by 50%.</li>
+                    <li><strong>Incremental migration:</strong> Strangler fig pattern allowed gradual migration from legacy system, reducing risk and allowing rollback at any point.</li>
+                    <li><strong>Team knowledge sharing:</strong> Weekly architecture reviews and pair programming sessions prevented knowledge silos and improved code quality.</li>
+                </ul>
+            </section>
+
+            <section id="future">
+                <h2>Future Enhancements</h2>
+                <p>Planned improvements for future iterations:</p>
+                <ul>
+                    <li>Machine learning model serving infrastructure for real-time predictions within pipelines</li>
+                    <li>Multi-region active-active deployment for disaster recovery and reduced latency</li>
+                    <li>Advanced data lineage tracking showing end-to-end data provenance</li>
+                    <li>Natural language query interface allowing business users to explore data without SQL</li>
+                    <li>Cost optimization through intelligent data tiering and compression strategies</li>
+                </ul>
+            </section>
+
+            <section id="team">
+                <h2>Team & Collaboration</h2>
+                <p>
+                    This project was built by a cross-functional team working in 2-week sprints with strong emphasis on code review and pair programming.
+                </p>
+
+                <div class="team-grid">
+                    <div class="team-member">
+                        <p class="team-member-name">Alex Chen</p>
+                        <p class="team-member-role">Lead Backend Developer</p>
+                    </div>
+                    <div class="team-member">
+                        <p class="team-member-name">Sarah Johnson</p>
+                        <p class="team-member-role">Platform Engineer</p>
+                    </div>
+                    <div class="team-member">
+                        <p class="team-member-name">Marcus Rodriguez</p>
+                        <p class="team-member-role">Frontend Developer</p>
+                    </div>
+                    <div class="team-member">
+                        <p class="team-member-name">Emily Zhang</p>
+                        <p class="team-member-role">Data Engineer</p>
+                    </div>
+                    <div class="team-member">
+                        <p class="team-member-name">David Park</p>
+                        <p class="team-member-role">DevOps Engineer</p>
+                    </div>
+                    <div class="team-member">
+                        <p class="team-member-name">Jessica Williams</p>
+                        <p class="team-member-role">QA Engineer</p>
+                    </div>
+                </div>
+
+                <p style="margin-top: 1.5rem;">
+                    Special thanks to the client's data team for their domain expertise and the infrastructure team for their support during the migration phase.
+                </p>
+            </section>
+
+            <section id="tech-stack">
+                <h2>Complete Tech Stack</h2>
+
+                <h3>Backend</h3>
+                <ul>
+                    <li><strong>API Framework:</strong> FastAPI with Pydantic for data validation</li>
+                    <li><strong>Stream Processing:</strong> Apache Kafka, asyncio workers</li>
+                    <li><strong>Database:</strong> TimescaleDB (PostgreSQL), Redis for caching</li>
+                    <li><strong>Object Storage:</strong> AWS S3 with lifecycle policies</li>
+                </ul>
+
+                <h3>Frontend</h3>
+                <ul>
+                    <li><strong>Framework:</strong> React with TypeScript</li>
+                    <li><strong>State Management:</strong> Redux Toolkit with RTK Query</li>
+                    <li><strong>Visualization:</strong> D3.js for custom charts, Recharts for standard visualizations</li>
+                    <li><strong>UI Components:</strong> Material-UI with custom theming</li>
+                </ul>
+
+                <h3>Infrastructure</h3>
+                <ul>
+                    <li><strong>Orchestration:</strong> Kubernetes (EKS) with Helm charts</li>
+                    <li><strong>CI/CD:</strong> GitHub Actions, ArgoCD for GitOps</li>
+                    <li><strong>Monitoring:</strong> Prometheus, Grafana, ELK stack, Sentry for error tracking</li>
+                    <li><strong>IaC:</strong> Terraform for infrastructure provisioning</li>
+                </ul>
+
+                <h3>Development Tools</h3>
+                <ul>
+                    <li><strong>Testing:</strong> pytest, Jest, k6 for load testing</li>
+                    <li><strong>Code Quality:</strong> Black, ESLint, SonarQube, pre-commit hooks</li>
+                    <li><strong>API Testing:</strong> Postman, automated contract testing with Pact</li>
+                    <li><strong>Documentation:</strong> Swagger/OpenAPI, Storybook for components</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
