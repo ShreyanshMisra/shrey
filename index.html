@@ -237,7 +237,7 @@
 
         .experience h3 {
             font-family: 'Source Sans 3', sans-serif;
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 600;
             color: #1a1a1a;
             margin: 0 0 0.2rem 0;
@@ -250,7 +250,7 @@
 
         .experience .role-line {
             color: #444;
-            font-size: 1.05rem;
+            font-size: 0.85rem;
             margin: 0;
         }
 
@@ -262,7 +262,12 @@
 
         .experience .dates {
             color: #666;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
+        }
+
+        .experience .description {
+            color: #444;
+            font-size: 0.65rem;
         }
 
         /* Responsive Design */
@@ -363,6 +368,28 @@
             <!-- Projects Section -->
             <section id="projects">
                 <h2>Projects</h2>
+
+                <div class="project">
+                    <h3>GitHub PR Merge Time Predictor</h3>
+                    <div class="tech-stack">Python, FastAPI, PostgreSQL, GraphQL, Optuna</div>
+                    <p class="description">
+                        End-to-end machine learning system that predicts how long a GitHub Pull Request will take to merge, helping developers prioritize reviews and set realistic expectations. The system analyzes PR metadata, code changes, repository history, and contributor patterns to forecast merge time with confidence intervals.
+                    </p>
+                    <div class="links">
+                        <a href="https://github.com/ShreyanshMisra/" target="_blank">GitHub →</a>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <h3>GitHub Activity Stream Analyzer</h3>
+                    <div class="tech-stack">Python, FastAPI, Kafka, Spark, PostgreSQL, Elasticsearch, Next.js</div>
+                    <p class="description">
+                        Real-time data pipeline that ingests GitHub's public event stream, processes millions of events per day, and surfaces actionable insights about trending repositories, emerging technologies, and developer activity patterns.
+                    </p>
+                    <div class="links">
+                        <a href="https://github.com/ShreyanshMisra" target="_blank">GitHub →</a>
+                    </div>
+                </div>
                 
                 <div class="project">
                     <h3>Clause   (HackUMass XIII Best AI Hack)</h3>
@@ -407,6 +434,10 @@
                 <div class="experience">
                     <h3><a href="https://buildumass.com/" target="_blank" style="color: inherit; text-decoration: none;">BUILD UMass</a> <span class="location"> Amherst, MA</span></h3>
                     <p class="role-line">President<span class="separator">|</span><span class="dates">February 2024 - Present</span></p>
+                    <p class="description">
+                        BUILD is a student-led software consulting club developing production-ready software solutions for nonprofits, startups, and corporations. Our products have empowered 75+ organizations with technology in the past 9 years, from AI products and data infrastructure to full-stack applications.
+.
+                    </p>
                 </div>
             </section>
         </main>
