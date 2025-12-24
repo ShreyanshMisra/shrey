@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shreyansh Misra | Software Engineer & Data Scientist</title>
     <link rel="canonical" href="https://shrey.tech/" />
+    <link rel="icon" type="image/png" href="static/Headshot.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -187,36 +188,39 @@
         }
 
         /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.25rem;
+        }
+
         .project {
+            background-color: #f0f0f0;
+            border-radius: 12px;
+            padding: 1.25rem;
+        }
+
+        .project-header {
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.85rem;
+            margin-bottom: 0.4rem;
         }
 
-        .project:last-child {
-            border-bottom: none;
+        .project-github-icon {
+            color: #666;
+            font-size: 0.9rem;
         }
 
-        .project-image {
-            flex-shrink: 0;
-            width: 80px;
-            height: 80px;
-            border-radius: 8px;
-            object-fit: cover;
-            background-color: #fafafa;
-        }
-
-        .project-content {
-            flex: 1;
+        .project-github-icon:hover {
+            color: #1a1a1a;
         }
 
         .project h3 {
             font-family: 'Source Sans 3', sans-serif;
             font-size: 1rem;
             font-weight: 600;
-            margin-bottom: 0.4rem;
+            margin: 0;
             color: #1a1a1a;
         }
 
@@ -239,15 +243,15 @@
 
         .project .description {
             color: #444;
-            margin-bottom: 0.6rem;
+            margin-bottom: 0;
             font-size: 0.85rem;
             line-height: 1.7;
         }
 
         /* Experience Section */
         .experience {
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.85rem;
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.5rem;
         }
 
         .experience:last-child {
@@ -349,14 +353,8 @@
                 font-size: 1.3rem;
             }
 
-            .project {
-                flex-direction: column;
-                gap: 0.75rem;
-            }
-
-            .project-image {
-                width: 60px;
-                height: 60px;
+            .projects-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -402,59 +400,74 @@
                     non-profits.
                 </p>
                 <p>
-                    
+
                 </p>
+            </section>
+
+            <!-- News Section -->
+            <section id="news">
+                <h2>Updates</h2>
+                <div class="news-item"><span class="date">• Nov 2025</span>: Clause won Best AI Hack at HackUMass XIII</div>
+                <div class="news-item"><span class="date">• Aug 2024</span>: Completed Internship at Siemens DISW</div>
             </section>
 
             <!-- Projects Section -->
             <section id="projects">
                 <h2>Projects</h2>
 
-                <div class="project">
-                    <img src="static/projects/eta.png" alt="GitHub PR Merge Time Predictor" class="project-image">
-                    <div class="project-content">
-                        <h3><a href="https://github.com/ShreyanshMisra/pr-eta/" target="_blank">GitHub PR Merge Time Predictor</a></h3>
+                <div class="projects-grid">
+                    <div class="project">
+                        <div class="project-header">
+                            <h3><a href="https://github.com/ShreyanshMisra/pr-eta/" target="_blank">GitHub PR Merge Time Predictor</a></h3>
+                            <a href="https://github.com/ShreyanshMisra/pr-eta/" target="_blank" class="project-github-icon" aria-label="View on GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
                         <div class="tech-stack">Python, FastAPI, PostgreSQL, GraphQL, Optuna</div>
                         <p class="description">
-                            End-to-end machine learning system that predicts how long a GitHub Pull Request will take to merge, helping developers prioritize reviews and set realistic expectations. The system analyzes PR metadata, code changes, repository history, and contributor patterns to forecast merge time with confidence intervals.
+                            Machine learning system predicting how long a GitHub PR will take to merge, helping developers prioritize reviews.
                         </p>
                     </div>
-                </div>
 
-                <div class="project">
-                    <img src="static/projects/pulse.png" alt="GitHub Activity Stream Analyzer" class="project-image">
-                    <div class="project-content">
-                        <h3><a href="https://github.com/ShreyanshMisra/gh-pulse" target="_blank">GitHub Activity Stream Analyzer</a></h3>
+                    <div class="project">
+                        <div class="project-header">
+                            <h3><a href="https://github.com/ShreyanshMisra/gh-pulse" target="_blank">GitHub Activity Stream Analyzer</a></h3>
+                            <a href="https://github.com/ShreyanshMisra/gh-pulse" target="_blank" class="project-github-icon" aria-label="View on GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
                         <div class="tech-stack">Python, FastAPI, Kafka, Spark, PostgreSQL, Elasticsearch, Next.js</div>
                         <p class="description">
-                            Real-time data pipeline that ingests GitHub's public event stream, processes millions of events per day, and surfaces actionable insights about trending repositories, emerging technologies, and developer activity patterns.
+                            Real-time data pipeline visualizing GitHub's trending repositories and developer activity patterns.
                         </p>
                     </div>
-                </div>
 
-                <div class="project">
-                    <img src="static/projects/clause.png" alt="Clause" class="project-image">
-                    <div class="project-content">
-                        <h3><a href="https://github.com/ShreyanshMisra/Clause_frontend" target="_blank">Clause (HackUMass XIII Best AI Hack)</a></h3>
-                        <div class="tech-stack">Python, TypeScript, Snowflake, Solana, FastAPI, Gemini API, ElevenLabs API</div>
+                    <div class="project">
+                        <div class="project-header">
+                            <h3><a href="https://github.com/ShreyanshMisra/Clause_frontend" target="_blank">Clause (HackUMass XIII Best AI Hack)</a></h3>
+                            <a href="https://github.com/ShreyanshMisra/Clause_frontend" target="_blank" class="project-github-icon" aria-label="View on GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                        <div class="tech-stack">Python, TypeScript, Snowflake, FastAPI, Gemini API, ElevenLabs</div>
                         <p class="description">
-                            AI-powered contract management platform that detects illegal clauses in legal agreements and generated demand letters
-                            with legal citations and damage estimates.
+                            AI-powered contract management platform that detects illegal clauses in legal agreements.
                         </p>
                     </div>
-                </div>
 
-                <div class="project">
-                    <img src="static/projects/kapok.png" alt="Kapok" class="project-image">
-                    <div class="project-content">
-                        <h3><a href="https://github.com/ShreyanshMisra/Kapok" target="_blank">Kapok</a></h3>
-                        <div class="tech-stack">Flutter, Dart, Firebase, MapBox API</div>
+                    <div class="project">
+                        <div class="project-header">
+                            <h3><a href="https://github.com/ShreyanshMisra/Kapok" target="_blank">Kapok</a></h3>
+                            <a href="https://github.com/ShreyanshMisra/Kapok" target="_blank" class="project-github-icon" aria-label="View on GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                        <div class="tech-stack">Flutter, Dart, Firebase, Hive, MapBox API</div>
                         <p class="description">
-                            Mobile app for coordinating volunteer disaster relief teams in low-connectivity zones, developed for the National Center for Technology and Dispute Resolution.
+                            Mobile app for coordinating disaster response teams, developed for the National Center for Technology and Dispute Resolution. 
                         </p>
                     </div>
                 </div>
-                    
             </section>
 
             <!-- Experience Section -->
@@ -474,9 +487,6 @@
                 <div class="experience">
                     <h3><a href="https://buildumass.com/" target="_blank">BUILD UMass</a><span class="location"> &nbsp; Amherst, MA</span></h3>
                     <p class="role-line">President<span class="separator">|</span><span class="dates">February 2024 - Present</span></p>
-                    <p class="description">
-                        BUILD is a student-led software consulting club developing production-ready software solutions for nonprofits, startups, and corporations. Our products have empowered 75+ organizations with technology in the past 9 years, from AI products and data infrastructure to full-stack applications.
-                    </p>
                 </div>
             </section>
         </main>
