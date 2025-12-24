@@ -188,12 +188,28 @@
 
         /* Projects Section */
         .project {
-            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
             padding-bottom: 0.85rem;
         }
 
         .project:last-child {
             border-bottom: none;
+        }
+
+        .project-image {
+            flex-shrink: 0;
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            object-fit: cover;
+            background-color: #fafafa;
+        }
+
+        .project-content {
+            flex: 1;
         }
 
         .project h3 {
@@ -202,6 +218,16 @@
             font-weight: 600;
             margin-bottom: 0.4rem;
             color: #1a1a1a;
+        }
+
+        .project h3 a {
+            color: #1a1a1a;
+            text-decoration: none;
+        }
+
+        .project h3 a:hover {
+            color: #666;
+            text-decoration: underline;
         }
 
         .project .tech-stack {
@@ -218,21 +244,14 @@
             line-height: 1.7;
         }
 
-        .project .links a {
-            color: #666;
-            text-decoration: none;
-            margin-right: 1rem;
-            font-size: 0.9rem;
-        }
-
-        .project .links a:hover {
-            color: #1a1a1a;
-            text-decoration: underline;
-        }
-
         /* Experience Section */
         .experience {
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.85rem;
+        }
+
+        .experience:last-child {
+            border-bottom: none;
         }
 
         .experience h3 {
@@ -240,7 +259,17 @@
             font-size: 1rem;
             font-weight: 600;
             color: #1a1a1a;
-            margin: 0 0 0.2rem 0;
+            margin-bottom: 0.4rem;
+        }
+
+        .experience h3 a {
+            color: #1a1a1a;
+            text-decoration: none;
+        }
+
+        .experience h3 a:hover {
+            color: #666;
+            text-decoration: underline;
         }
 
         .experience .location {
@@ -249,9 +278,10 @@
         }
 
         .experience .role-line {
-            color: #444;
+            color: #666;
             font-size: 0.85rem;
-            margin: 0;
+            font-style: italic;
+            margin-bottom: 0.6rem;
         }
 
         .experience .separator {
@@ -262,12 +292,13 @@
 
         .experience .dates {
             color: #666;
-            font-size: 0.75rem;
+            font-size: 0.85rem;
         }
 
         .experience .description {
             color: #444;
-            font-size: 0.65rem;
+            font-size: 0.85rem;
+            line-height: 1.7;
         }
 
         /* Responsive Design */
@@ -316,6 +347,16 @@
 
             .content h2 {
                 font-size: 1.3rem;
+            }
+
+            .project {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+
+            .project-image {
+                width: 60px;
+                height: 60px;
             }
         }
     </style>
@@ -370,48 +411,47 @@
                 <h2>Projects</h2>
 
                 <div class="project">
-                    <h3>GitHub PR Merge Time Predictor</h3>
-                    <div class="tech-stack">Python, FastAPI, PostgreSQL, GraphQL, Optuna</div>
-                    <p class="description">
-                        End-to-end machine learning system that predicts how long a GitHub Pull Request will take to merge, helping developers prioritize reviews and set realistic expectations. The system analyzes PR metadata, code changes, repository history, and contributor patterns to forecast merge time with confidence intervals.
-                    </p>
-                    <div class="links">
-                        <a href="https://github.com/ShreyanshMisra/" target="_blank">GitHub →</a>
+                    <img src="static/projects/eta.png" alt="GitHub PR Merge Time Predictor" class="project-image">
+                    <div class="project-content">
+                        <h3><a href="https://github.com/ShreyanshMisra/pr-eta/" target="_blank">GitHub PR Merge Time Predictor</a></h3>
+                        <div class="tech-stack">Python, FastAPI, PostgreSQL, GraphQL, Optuna</div>
+                        <p class="description">
+                            End-to-end machine learning system that predicts how long a GitHub Pull Request will take to merge, helping developers prioritize reviews and set realistic expectations. The system analyzes PR metadata, code changes, repository history, and contributor patterns to forecast merge time with confidence intervals.
+                        </p>
                     </div>
                 </div>
 
                 <div class="project">
-                    <h3>GitHub Activity Stream Analyzer</h3>
-                    <div class="tech-stack">Python, FastAPI, Kafka, Spark, PostgreSQL, Elasticsearch, Next.js</div>
-                    <p class="description">
-                        Real-time data pipeline that ingests GitHub's public event stream, processes millions of events per day, and surfaces actionable insights about trending repositories, emerging technologies, and developer activity patterns.
-                    </p>
-                    <div class="links">
-                        <a href="https://github.com/ShreyanshMisra" target="_blank">GitHub →</a>
-                    </div>
-                </div>
-                
-                <div class="project">
-                    <h3>Clause   (HackUMass XIII Best AI Hack)</h3>
-                    <div class="tech-stack">Python, TypeScript, Snowflake, Solana, FastAPI, Gemini API, ElevenLabs API</div>
-                    <p class="description">
-                        AI-powered contract management platform that detects illegal clauses in legal agreements and generated demand letters
-                        with legal citations and damage estimates. 
-                    </p>
-                    <div class="links">
-                        <a href="https://github.com/ShreyanshMisra/Clause_frontend" target="_blank">GitHub →</a>
-                        <a href="https://devpost.com/software/clause-bu9l74" target="_blank">Devpost →</a>
+                    <img src="static/projects/pulse.png" alt="GitHub Activity Stream Analyzer" class="project-image">
+                    <div class="project-content">
+                        <h3><a href="https://github.com/ShreyanshMisra/gh-pulse" target="_blank">GitHub Activity Stream Analyzer</a></h3>
+                        <div class="tech-stack">Python, FastAPI, Kafka, Spark, PostgreSQL, Elasticsearch, Next.js</div>
+                        <p class="description">
+                            Real-time data pipeline that ingests GitHub's public event stream, processes millions of events per day, and surfaces actionable insights about trending repositories, emerging technologies, and developer activity patterns.
+                        </p>
                     </div>
                 </div>
 
                 <div class="project">
-                    <h3>Kapok</h3>
-                    <div class="tech-stack">Flutter, Dart, Firebase, MapBox API</div>
-                    <p class="description">
-                        Mobile app for coordinating volunteer disaster relief teams in low-connectivity zones, developed for the National Center for Technology and Dispute Resolution.
-                    </p>
-                    <div class="links">
-                        <a href="https://github.com/ShreyanshMisra/Kapok" target="_blank">GitHub →</a>
+                    <img src="static/projects/clause.png" alt="Clause" class="project-image">
+                    <div class="project-content">
+                        <h3><a href="https://github.com/ShreyanshMisra/Clause_frontend" target="_blank">Clause (HackUMass XIII Best AI Hack)</a></h3>
+                        <div class="tech-stack">Python, TypeScript, Snowflake, Solana, FastAPI, Gemini API, ElevenLabs API</div>
+                        <p class="description">
+                            AI-powered contract management platform that detects illegal clauses in legal agreements and generated demand letters
+                            with legal citations and damage estimates.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <img src="static/projects/kapok.png" alt="Kapok" class="project-image">
+                    <div class="project-content">
+                        <h3><a href="https://github.com/ShreyanshMisra/Kapok" target="_blank">Kapok</a></h3>
+                        <div class="tech-stack">Flutter, Dart, Firebase, MapBox API</div>
+                        <p class="description">
+                            Mobile app for coordinating volunteer disaster relief teams in low-connectivity zones, developed for the National Center for Technology and Dispute Resolution.
+                        </p>
                     </div>
                 </div>
                     
@@ -422,21 +462,20 @@
                 <h2>Experience</h2>
 
                 <div class="experience">
-                    <h3>Siemens Digital Industries<span class="location"> Boston, MA</span></h3>
+                    <h3>Siemens Digital Industries<span class="location"> &nbsp; Boston, MA</span></h3>
                     <p class="role-line">Customer Analytics Intern<span class="separator">|</span><span class="dates">May 2025 - August 2025</span></p>
                 </div>
 
                 <div class="experience">
-                    <h3>Altair <span class="location"> Chelmsford, MA</span></h3>
+                    <h3>Altair <span class="location"> &nbsp; Chelmsford, MA</span></h3>
                     <p class="role-line">Customer Sucess Intern<span class="separator">|</span><span class="dates">May 2024 - April 2025</span></p>
                 </div>
 
                 <div class="experience">
-                    <h3><a href="https://buildumass.com/" target="_blank" style="color: inherit; text-decoration: none;">BUILD UMass</a> <span class="location"> Amherst, MA</span></h3>
+                    <h3><a href="https://buildumass.com/" target="_blank">BUILD UMass</a><span class="location"> &nbsp; Amherst, MA</span></h3>
                     <p class="role-line">President<span class="separator">|</span><span class="dates">February 2024 - Present</span></p>
                     <p class="description">
                         BUILD is a student-led software consulting club developing production-ready software solutions for nonprofits, startups, and corporations. Our products have empowered 75+ organizations with technology in the past 9 years, from AI products and data infrastructure to full-stack applications.
-.
                     </p>
                 </div>
             </section>
