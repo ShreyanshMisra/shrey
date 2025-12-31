@@ -1,0 +1,11 @@
+# Robots.txt for shrey.tech
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://shrey.tech/sitemap.xml
+
+# Disallow sensitive directories
+Disallow: /private/
+Disallow: /.git/
+Disallow: /.env

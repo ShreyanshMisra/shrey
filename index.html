@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="description" content="Shreyansh Misra is a software engineer and data scientist studying Data Science and Mathematics at UMass Amherst. Experience in analytics, AI, and full-stack development.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shreyansh Misra | Software Engineer & Data Scientist</title>
+    <title>Shreyansh Misra</title>
     <link rel="canonical" href="https://shrey.tech/" />
-    <link rel="icon" type="image/png" href="static/Headshot.png">
+    <link rel="icon" type="image/png" href="static/Headshot.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -16,25 +16,52 @@
     <meta property="og:description" content="Software engineer and data scientist at UMass Amherst with experience in analytics, AI, and full-stack development.">
     <meta property="og:url" content="https://shrey.tech/">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://shrey.tech/static/Headshot.png">
-    <img ... loading="lazy">
+    <meta property="og:image" content="https://shrey.tech/static/Headshot.jpg">
+    <meta property="og:image:width" content="180">
+    <meta property="og:image:height" content="180">
+    <meta property="og:image:alt" content="Shreyansh Misra profile photo">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Shreyansh Misra | Software Engineer & Data Scientist">
+    <meta name="twitter:description" content="Software engineer and data scientist at UMass Amherst with experience in analytics, AI, and full-stack development.">
+    <meta name="twitter:image" content="https://shrey.tech/static/Headshot.jpg">
+
+    <!-- Additional SEO -->
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Shreyansh Misra">
+    <meta name="theme-color" content="#fafafa">
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
     <script type="application/ld+json">
     {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Shreyansh Misra",
-    "url": "https://shrey.tech/",
-    "image": "https://shrey.tech/static/Headshot.png",
-    "email": "mailto:shreyansh@umass.edu",
-    "affiliation": {
-        "@type": "CollegeOrUniversity",
-        "name": "University of Massachusetts Amherst"
-    },
-    "jobTitle": "Software Engineer, Data Scientist",
-    "sameAs": [
-        "https://github.com/shreyanshmisra",
-        "https://www.linkedin.com/in/shreyanshmisra/"
-    ]
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Shreyansh Misra",
+        "givenName": "Shreyansh",
+        "familyName": "Misra",
+        "url": "https://shrey.tech/",
+        "image": "https://shrey.tech/static/Headshot.jpg",
+        "email": "mailto:shreyansh@umass.edu",
+        "jobTitle": ["Software Engineer", "Data Scientist"],
+        "description": "Software engineer and data scientist studying Data Science and Mathematics at UMass Amherst with experience in analytics, AI, and full-stack development.",
+        "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "University of Massachusetts Amherst",
+            "url": "https://www.umass.edu/"
+        },
+        "knowsAbout": [
+            "Data Science",
+            "Machine Learning",
+            "Python",
+            "Full-Stack Development",
+            "Data Analytics",
+            "AI"
+        ],
+        "sameAs": [
+            "https://github.com/shreyanshmisra",
+            "https://www.linkedin.com/in/shreyanshmisra/"
+        ]
     }
     </script>
 
@@ -116,6 +143,41 @@
             font-size: 0.85rem;
             color: #888;
             margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .green-dot-container {
+            position: relative;
+            width: 5px;
+            height: 5px;
+        }
+
+        .green-dot {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background-color: #22c55e;
+            border-radius: 50%;
+        }
+
+        .green-dot-ping {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background-color: #22c55e;
+            border-radius: 50%;
+            animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+            opacity: 0.75;
+        }
+
+        @keyframes ping {
+            75%, 100% {
+                transform: scale(2);
+                opacity: 0;
+            }
         }
 
         .sidebar .email {
@@ -305,6 +367,22 @@
             line-height: 1.7;
         }
 
+        /* Company Link Styles */
+        .company-link {
+            text-decoration: none;
+            color: #1a1a1a;
+            font-weight: 400;
+            transition: color 0.2s;
+        }
+
+        .company-link.siemens:hover {
+            color: #00b3a4;
+        }
+
+        .company-link.altair:hover {
+            color: #f5a623;
+        }
+
         /* Responsive Design */
         @media (max-width: 1024px) {
             .sidebar {
@@ -363,26 +441,30 @@
     <div class="container">
         <aside class="sidebar">
             <div class="sidebar-content">
-                <img src="static/Headshot.png" 
+                <img src="static/Headshot.jpg"
                     alt="Shreyansh Misra, Software Engineer and Data Scientist at UMass Amherst"
-                    class="profile-image">
+                    class="profile-image"
+                    width="180"
+                    height="180"
+                    loading="eager"
+                    fetchpriority="high"
+                    decoding="async">
                 
                 <h1>Shreyansh Misra</h1>
-                <p class="title">Software Engineer and Data Scientist</p>
                 
                 <p class="affiliation">University of Massachusetts, Amherst</p>
-                <p class="degree">B.S.  Data Science and Mathematics</p>
+                <p class="degree"><span class="green-dot-container"><span class="green-dot-ping"></span><span class="green-dot"></span></span>Data Science and Math @ UMass</p>
                 
                 <a href="mailto:shreyansh@umass.edu" class="email">shreyansh@umass.edu</a>
                 
                 <div class="social-links">
-                    <a href="public/Shreyansh_Misra_Resume.pdf" target="_blank" aria-label="Resume" title="Resume">
+                    <a href="public/Shreyansh_Misra_Resume.pdf" target="_blank" rel="noopener" aria-label="Resume" title="Resume">
                         <i class="fa-solid fa-file-lines"></i>
                     </a>
-                    <a href="https://github.com/shreyanshmisra" target="_blank" aria-label="GitHub" title="GitHub">
+                    <a href="https://github.com/shreyanshmisra" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/shreyanshmisra/" target="_blank" aria-label="LinkedIn" title="LinkedIn">
+                    <a href="https://www.linkedin.com/in/shreyanshmisra/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
                         <i class="fab fa-linkedin"></i>
                     </a>
                 </div>
@@ -392,15 +474,9 @@
         <!-- Scrollable Content -->
         <main class="content">
             <section id="about">
-                <h2>About Me</h2>
+                <h2>Shreyansh Misra</h2>
                 <p>
-                    I study Data Science and Mathematics at UMass. I previously interned at Siemens Digital Industries, 
-                    primarily working on deploying ETL pipelines and creating dashboards. I'm also the President of 
-                    BUILD UMass, a 65+ member organization delivering software solutions to local businesses and 
-                    non-profits.
-                </p>
-                <p>
-
+                    I study Data Science and Mathematics at the University of Massachusetts Amherst. I've previously interned at <a href="https://www.sw.siemens.com/en-US/" target="_blank" rel="noopener noreferrer" class="company-link siemens">Siemens</a> and <a href="https://altair.com/" target="_blank" rel="noopener noreferrer" class="company-link altair">Altair</a>.
                 </p>
             </section>
 
@@ -418,8 +494,8 @@
                 <div class="projects-grid">
                     <div class="project">
                         <div class="project-header">
-                            <h3><a href="https://github.com/ShreyanshMisra/pr-eta/" target="_blank">GitHub PR Merge Time Predictor</a></h3>
-                            <a href="https://github.com/ShreyanshMisra/pr-eta/" target="_blank" class="project-github-icon" aria-label="View on GitHub">
+                            <h3><a href="https://github.com/ShreyanshMisra/pr-eta/" target="_blank" rel="noopener noreferrer">GitHub PR Merge Time Predictor</a></h3>
+                            <a href="https://github.com/ShreyanshMisra/pr-eta/" target="_blank" rel="noopener noreferrer" class="project-github-icon" aria-label="View on GitHub">
                                 <i class="fab fa-github"></i>
                             </a>
                         </div>
@@ -431,8 +507,8 @@
 
                     <div class="project">
                         <div class="project-header">
-                            <h3><a href="https://github.com/ShreyanshMisra/gh-pulse" target="_blank">GitHub Activity Stream Analyzer</a></h3>
-                            <a href="https://github.com/ShreyanshMisra/gh-pulse" target="_blank" class="project-github-icon" aria-label="View on GitHub">
+                            <h3><a href="https://github.com/ShreyanshMisra/gh-pulse" target="_blank" rel="noopener noreferrer">GitHub Activity Stream Analyzer</a></h3>
+                            <a href="https://github.com/ShreyanshMisra/gh-pulse" target="_blank" rel="noopener noreferrer" class="project-github-icon" aria-label="View on GitHub">
                                 <i class="fab fa-github"></i>
                             </a>
                         </div>
@@ -444,8 +520,8 @@
 
                     <div class="project">
                         <div class="project-header">
-                            <h3><a href="https://github.com/ShreyanshMisra/Clause_frontend" target="_blank">Clause (HackUMass XIII Best AI Hack)</a></h3>
-                            <a href="https://github.com/ShreyanshMisra/Clause_frontend" target="_blank" class="project-github-icon" aria-label="View on GitHub">
+                            <h3><a href="https://github.com/ShreyanshMisra/Clause_frontend" target="_blank" rel="noopener noreferrer">Clause (HackUMass XIII Best AI Hack)</a></h3>
+                            <a href="https://github.com/ShreyanshMisra/Clause_frontend" target="_blank" rel="noopener noreferrer" class="project-github-icon" aria-label="View on GitHub">
                                 <i class="fab fa-github"></i>
                             </a>
                         </div>
@@ -457,8 +533,8 @@
 
                     <div class="project">
                         <div class="project-header">
-                            <h3><a href="https://github.com/ShreyanshMisra/Kapok" target="_blank">Kapok</a></h3>
-                            <a href="https://github.com/ShreyanshMisra/Kapok" target="_blank" class="project-github-icon" aria-label="View on GitHub">
+                            <h3><a href="https://github.com/ShreyanshMisra/Kapok" target="_blank" rel="noopener noreferrer">Kapok</a></h3>
+                            <a href="https://github.com/ShreyanshMisra/Kapok" target="_blank" rel="noopener noreferrer" class="project-github-icon" aria-label="View on GitHub">
                                 <i class="fab fa-github"></i>
                             </a>
                         </div>
@@ -467,26 +543,6 @@
                             Mobile app for coordinating disaster response teams, developed for the National Center for Technology and Dispute Resolution. 
                         </p>
                     </div>
-                </div>
-            </section>
-
-            <!-- Experience Section -->
-            <section id="experience">
-                <h2>Experience</h2>
-
-                <div class="experience">
-                    <h3>Siemens Digital Industries<span class="location"> &nbsp; Boston, MA</span></h3>
-                    <p class="role-line">Customer Analytics Intern<span class="separator">|</span><span class="dates">May 2025 - August 2025</span></p>
-                </div>
-
-                <div class="experience">
-                    <h3>Altair <span class="location"> &nbsp; Chelmsford, MA</span></h3>
-                    <p class="role-line">Customer Sucess Intern<span class="separator">|</span><span class="dates">May 2024 - April 2025</span></p>
-                </div>
-
-                <div class="experience">
-                    <h3><a href="https://buildumass.com/" target="_blank">BUILD UMass</a><span class="location"> &nbsp; Amherst, MA</span></h3>
-                    <p class="role-line">President<span class="separator">|</span><span class="dates">February 2024 - Present</span></p>
                 </div>
             </section>
         </main>
