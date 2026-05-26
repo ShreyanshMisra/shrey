@@ -167,19 +167,6 @@ body {
     line-height: 1.7;
 }
 
-/* News Section */
-.news-item {
-    margin-bottom: 0.85rem;
-    color: #444;
-    font-size: 0.85rem;
-    line-height: 1.0;
-}
-
-.news-item .date {
-    color: #666;
-    font-weight: 600;
-}
-
 /* Projects Section */
 .projects-grid {
     display: grid;
@@ -320,6 +307,10 @@ body {
 
 .company-link.altair:hover {
     color: #f5a623;
+}
+
+.company-link.buildumass:hover {
+    color: #e03131;
 }
 
 /* Responsive Design */
