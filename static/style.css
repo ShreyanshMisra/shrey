@@ -80,6 +80,17 @@ body {
     gap: 8px;
 }
 
+.sidebar a.degree.open-to-work {
+    text-decoration: none;
+    color: #16a34a;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.sidebar a.degree.open-to-work:hover {
+    color: #15803d;
+}
+
 .green-dot-container {
     position: relative;
     width: 5px;
