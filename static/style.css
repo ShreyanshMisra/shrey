@@ -157,7 +157,7 @@ body {
     margin-bottom: 20px;
 }
 
-.sidebar a.open-to-work {
+.sidebar .open-to-work {
     display: inline-flex;
     align-items: center;
     gap: 9px;
@@ -529,7 +529,7 @@ body {
         margin-bottom: 10px;
     }
 
-    .sidebar a.open-to-work {
+    .sidebar .open-to-work {
         font-size: 0.8rem;
         padding: 5px 12px;
     }
