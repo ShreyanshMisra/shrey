@@ -1,287 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="google-site-verification" content="k-ZGhwW53bcbY-47NpccD6J3jmjYTVGvonkyxoSguU8" />
+    <meta name="google-site-verification" content="k-ZGhwW53bcbY-47NpccD6J3jmjYTVGvonkyxoSguU8">
     <meta charset="UTF-8">
-    <meta name="description" content="Shreyansh Misra is a software engineer and data scientist, B.S. in Data Science from UMass Amherst (2026). Open to full-time SWE, data, and solutions engineering roles. Experience in analytics, AI, and full-stack development.">
+    <meta name="description" content="Shreyansh Misra is a software and data engineer building AI systems, data products, and useful tools.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shreyansh Misra</title>
-    <link rel="canonical" href="https://shrey.tech/" />
+    <link rel="canonical" href="https://shrey.tech/">
     <link rel="icon" type="image/svg+xml" href="static/favicon.svg">
     <link rel="apple-touch-icon" href="static/Headshot.jpg">
     <script>
         (function () {
             var theme = localStorage.getItem('theme');
-            if (theme !== 'light' && theme !== 'dark') {
-                theme = 'light';
-            }
-            document.documentElement.setAttribute('data-theme', theme);
+            document.documentElement.setAttribute('data-theme', theme === 'dark' ? 'dark' : 'light');
         })();
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
-    <meta property="og:title" content="Shreyansh Misra | Software & Data Engineering">
-    <meta property="og:description" content="B.S. in Data Science, UMass Amherst '26. Open to full-time SWE, data, and solutions engineering roles. Experience in analytics, AI, and full-stack development.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+    <meta property="og:title" content="Shreyansh Misra">
+    <meta property="og:description" content="AI systems, data products, and useful software for complex workflows.">
     <meta property="og:url" content="https://shrey.tech/">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://shrey.tech/static/Headshot.jpg">
-    <meta property="og:image:width" content="180">
-    <meta property="og:image:height" content="180">
-    <meta property="og:image:alt" content="Shreyansh Misra profile photo">
-
-    <!-- Twitter Card -->
+    <meta property="og:image:alt" content="Portrait of Shreyansh Misra">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Shreyansh Misra | Software & Data Engineering">
-    <meta name="twitter:description" content="B.S. in Data Science, UMass Amherst '26. Open to full-time SWE, data, and solutions engineering roles. Experience in analytics, AI, and full-stack development.">
+    <meta name="twitter:title" content="Shreyansh Misra">
+    <meta name="twitter:description" content="AI systems, data products, and useful software for complex workflows.">
     <meta name="twitter:image" content="https://shrey.tech/static/Headshot.jpg">
-
-    <!-- Additional SEO -->
     <meta name="robots" content="index, follow">
     <meta name="author" content="Shreyansh Misra">
-    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#faf9f6">
-    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#161411">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f7f5">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#141414">
     <link rel="sitemap" type="application/xml" href="/sitemap.xml">
-
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Shreyansh Misra",
-        "givenName": "Shreyansh",
-        "familyName": "Misra",
         "url": "https://shrey.tech/",
         "image": "https://shrey.tech/static/Headshot.jpg",
-        "email": "mailto:shreyansh@umass.edu",
+        "email": "mailto:shreymisra26@gmail.com",
         "jobTitle": ["Software Engineer", "Data Scientist", "Solutions Engineer"],
-        "description": "Software engineer and data scientist with a B.S. in Data Science from UMass Amherst (2026). Open to full-time software, data, and solutions engineering roles, with experience in analytics, AI, and full-stack development.",
-        "alumniOf": {
-            "@type": "CollegeOrUniversity",
-            "name": "University of Massachusetts Amherst",
-            "url": "https://www.umass.edu/"
-        },
-        "knowsAbout": [
-            "Data Science",
-            "Machine Learning",
-            "Python",
-            "Full-Stack Development",
-            "Data Analytics",
-            "AI"
-        ],
-        "sameAs": [
-            "https://github.com/shreyanshmisra",
-            "https://www.linkedin.com/in/shreyanshmisra/"
-        ]
+        "alumniOf": {"@type": "CollegeOrUniversity", "name": "University of Massachusetts Amherst"},
+        "sameAs": ["https://github.com/shreyanshmisra", "https://www.linkedin.com/in/shreyanshmisra/", "https://x.com/shreyanshmisra6"]
     }
     </script>
-
     <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
-    <div class="container">
+    <svg class="svg-symbols" aria-hidden="true">
+        <symbol id="icon-github" viewBox="0 0 24 24"><path d="M12 .7a11.5 11.5 0 0 0-3.64 22.4c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.36-3.9-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.57-.3-5.27-1.29-5.27-5.73 0-1.27.45-2.3 1.19-3.11-.12-.3-.52-1.47.11-3.07 0 0 .97-.31 3.18 1.19a11.04 11.04 0 0 1 5.8 0c2.2-1.5 3.17-1.19 3.17-1.19.63 1.6.23 2.77.11 3.07.74.81 1.19 1.84 1.19 3.11 0 4.45-2.71 5.43-5.29 5.72.42.36.79 1.06.79 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></symbol>
+        <symbol id="icon-package" viewBox="0 0 24 24"><path d="m12 2 9 5-9 5-9-5 9-5Zm-9 9 9 5 9-5v6l-9 5-9-5v-6Z"/></symbol>
+        <symbol id="icon-file" viewBox="0 0 24 24"><path d="M6 2h8l4 4v16H6V2Zm7 1.5V7h3.5M9 12h6M9 16h6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+        <symbol id="icon-linkedin" viewBox="0 0 24 24"><path d="M5.4 7.8A2.4 2.4 0 1 0 5.4 3a2.4 2.4 0 0 0 0 4.8ZM3.4 21h4V9.2h-4V21Zm6.5 0h4v-6.6c0-1.75.33-3.44 2.5-3.44 2.14 0 2.16 2 2.16 3.56V21h4v-7.3c0-3.58-.77-6.34-4.96-6.34-2.01 0-3.36 1.1-3.9 2.14h-.05V7.9H9.9V21Z"/></symbol>
+        <symbol id="icon-x" viewBox="0 0 24 24"><path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.41l-5.8-7.59-6.63 7.59H.47l8.6-9.83L0 1.15h7.59l5.25 6.94 6.06-6.94Zm-1.29 19.49h2.04L6.49 3.24H4.3l13.31 17.4Z"/></symbol>
+        <symbol id="icon-resume" viewBox="0 0 24 24"><path d="M6 2h8l4 4v16H6V2Zm7 1.5V7h3.5M9 12h6M9 16h6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    </svg>
+
+    <div class="site-shell">
         <aside class="sidebar">
-            <div class="sidebar-content">
-                <img src="static/Headshot.jpg"
-                    alt="Shreyansh Misra, Software Engineer and Data Scientist at UMass Amherst"
-                    class="profile-image"
-                    width="180"
-                    height="180"
-                    loading="eager"
-                    fetchpriority="high"
-                    decoding="async">
-
-                <div class="sidebar-text">
-                    <h1>Shreyansh Misra</h1>
-
-                    <p class="affiliation">Data Science @ UMass</p>
-                    <span class="open-to-work location-pill"><span class="green-dot-container"><span class="green-dot-ping"></span><span class="green-dot"></span></span>Boston, MA</span>
-
-                    <a href="mailto:shreyansh@umass.edu" class="email">shreyansh@umass.edu</a>
-
-                    <div class="social-links">
-                        <a href="public/Shreyansh_Misra_Resume.pdf" target="_blank" rel="noopener" aria-label="Resume" title="Resume">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
-                        </a>
-                        <a href="https://github.com/shreyanshmisra" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                        </a>
-                        <a href="https://www.linkedin.com/in/shreyanshmisra/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
-                        </a>
-                        <a href="https://x.com/shreyanshmisra6" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" title="X (Twitter)">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
-                        </a>
-                        <span class="social-divider" aria-hidden="true"></span>
-                        <button type="button" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
-                            <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
-                            <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
-                        </button>
-                    </div>
+            <a class="monogram" href="#top" aria-label="Shreyansh Misra, home">SM<span class="monogram-dot">.</span></a>
+            <nav class="site-nav" aria-label="Primary navigation">
+                <a href="#about" class="nav-link is-active">About</a>
+                <a href="#ventures" class="nav-link">Ventures</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <div class="sidebar-profile">
+                <img src="static/Headshot.jpg" alt="Portrait of Shreyansh Misra" width="96" height="96" loading="eager" fetchpriority="high">
+                <div>
+                    <p class="sidebar-name">Shreyansh Misra</p>
+                    <p class="sidebar-meta">Boston, MA</p>
+                </div>
+            </div>
+            <div class="sidebar-footer">
+                <div class="sidebar-socials">
+                    <a href="public/Shreyansh_Misra_Resume.pdf" target="_blank" rel="noopener" aria-label="Resume"><svg><use href="#icon-resume"></use></svg></a>
+                    <a href="https://github.com/shreyanshmisra" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg><use href="#icon-github"></use></svg></a>
+                    <a href="https://www.linkedin.com/in/shreyanshmisra/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg><use href="#icon-linkedin"></use></svg></a>
+                    <a href="https://x.com/shreyanshmisra6" target="_blank" rel="noopener noreferrer" aria-label="X"><svg><use href="#icon-x"></use></svg></a>
+                    <button type="button" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode"><span class="theme-icon" aria-hidden="true"></span></button>
                 </div>
             </div>
         </aside>
 
-        <!-- Scrollable Content -->
-        <main class="content">
-            <section id="about">
-                <h2>About Me</h2>
-                <p>
-                    I studied Data Science at the University of Massachusetts Amherst. I've interned at <a href="https://www.sw.siemens.com/en-US/" target="_blank" rel="noopener noreferrer" class="company-link siemens">Siemens</a> and <a href="https://altair.com/" target="_blank" rel="noopener noreferrer" class="company-link altair">Altair</a>, where I built data-intensive systems and customer-facing tools.
-                    I was also Co-President of <a href="https://www.buildumass.com/" target="_blank" rel="noopener noreferrer" class="company-link buildumass">BUILD UMass</a>, a 65+ member student-led engineering organization that ships production software for non-profits.
-                </p>
-            </section>
-
-            <!-- Projects Section -->
-            <section id="projects">
-                <h2>Projects</h2>
-
-                <div class="projects-grid">
-                    <div class="project">
-                        <a href="https://pypi.org/project/runeconomy/" target="_blank" rel="noopener noreferrer" class="project-image-link">
-                            <img src="static/projects/runeconomy.jpg" alt="RunEconomy" class="project-image" loading="lazy">
-                        </a>
-                        <div class="project-header">
-                            <h3><a href="https://pypi.org/project/runeconomy/" target="_blank" rel="noopener noreferrer">RunEconomy</a></h3>
-                            <a href="https://github.com/ShreyanshMisra/runeconomy" target="_blank" rel="noopener noreferrer" class="project-github-icon" aria-label="View on GitHub">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                            </a>
-                        </div>
-                        <p class="description">
-                            PyPI package that detects inference waste in multi-step LLM agent workflows and runs controlled before-and-after experiments to verify whether serving optimizations actually improve task performance.
-                        </p>
-                    </div>
-
-                    <div class="project">
-                        <a href="https://floralinkmcp.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-image-link">
-                            <img src="static/projects/floralink.jpg" alt="FloraLink" class="project-image" loading="lazy">
-                        </a>
-                        <div class="project-header">
-                            <h3><a href="https://floralinkmcp.vercel.app/" target="_blank" rel="noopener noreferrer">FloraLink</a></h3>
-                            <a href="https://github.com/ShreyanshMisra/floralink" target="_blank" rel="noopener noreferrer" class="project-github-icon" aria-label="View on GitHub">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                            </a>
-                        </div>
-                        <p class="description">
-                            WebMCP-powered biodiversity app where an AI browsing agent turns field observations into structured, human-verified ecological data.
-                        </p>
-                    </div>
-
-                    <div class="project">
-                        <a href="https://github.com/ShreyanshMisra/clause" target="_blank" rel="noopener noreferrer" class="project-image-link">
-                            <img src="static/projects/clause.jpg" alt="Clause - HackUMass XIII Best AI Hack" class="project-image" loading="lazy">
-                        </a>
-                        <div class="project-header">
-                            <h3><a href="https://clauselegal.vercel.app" target="_blank" rel="noopener noreferrer">Clause (HackUMass XIII Best AI Hack)</a></h3>
-                            <a href="https://github.com/ShreyanshMisra/clause" target="_blank" rel="noopener noreferrer" class="project-github-icon" aria-label="View on GitHub">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                            </a>
-                        </div>
-                        <p class="description">
-                            AI-powered contract management platform that detects illegal clauses in legal agreements.
-                        </p>
-                    </div>
-
-                    <div class="project">
-                        <a href="https://x.com/shreyanshmisra6/status/2077076583748108441?s=20" target="_blank" rel="noopener noreferrer" class="project-image-link">
-                            <img src="static/projects/incident.jpg" alt="Incident Agent" class="project-image" loading="lazy">
-                        </a>
-                        <div class="project-header">
-                            <h3><a href="https://github.com/ShreyanshMisra/IncidentAgent" target="_blank" rel="noopener noreferrer">Incident Agent</a></h3>
-                            <a href="https://github.com/ShreyanshMisra/IncidentAgent" target="_blank" rel="noopener noreferrer" class="project-github-icon" aria-label="View on GitHub">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                            </a>
-                        </div>
-                        <p class="description">
-                            AI agent that automates incident response, using agent loops, triaging alerts and surfacing root causes.
-                        </p>
-                    </div>
-
-                    <div class="project">
-                        <a href="https://github.com/ShreyanshMisra/Kapok" target="_blank" rel="noopener noreferrer" class="project-image-link">
-                            <img src="static/projects/kapok.jpg" alt="Kapok" class="project-image" loading="lazy">
-                        </a>
-                        <div class="project-header">
-                            <h3><a href="https://github.com/ShreyanshMisra/Kapok" target="_blank" rel="noopener noreferrer">Kapok</a></h3>
-                            <a href="https://github.com/ShreyanshMisra/Kapok" target="_blank" rel="noopener noreferrer" class="project-github-icon" aria-label="View on GitHub">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                            </a>
-                        </div>
-                        <p class="description">
-                            Mobile app for coordinating disaster response teams, handed off to the RN Response Network (powered by National Nurses United).
-                        </p>
-                    </div>
-
-                    <div class="project">
-                        <a href="https://flavours-neo4j.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-image-link">
-                            <img src="static/projects/graph.jpg" alt="Flavor Pairing Knowledge Graph" class="project-image" loading="lazy">
-                        </a>
-                        <div class="project-header">
-                            <h3><a href="https://github.com/ShreyanshMisra/flavours" target="_blank" rel="noopener noreferrer">Flavor Pairing Knowledge Graph</a></h3>
-                            <a href="https://github.com/ShreyanshMisra/flavours" target="_blank" rel="noopener noreferrer" class="project-github-icon" aria-label="View on GitHub">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                            </a>
-                        </div>
-                        <p class="description">
-                            Knowledge graph modelling ingredients, their flavor compounds, and pairing relationships based on shared chemistry.
-                        </p>
-                    </div>
-
-                    <div class="project">
-                        <a href="https://dueloro.com/" target="_blank" rel="noopener noreferrer" class="project-image-link">
-                            <img src="static/projects/clutch.jpg" alt="Money Match" class="project-image" loading="lazy">
-                        </a>
-                        <div class="project-header">
-                            <h3><a href="https://github.com/ShreyanshMisra/moneymatch" target="_blank" rel="noopener noreferrer">Money Match</a></h3>
-                            <a href="https://github.com/ShreyanshMisra/moneymatch" target="_blank" rel="noopener noreferrer" class="project-github-icon" aria-label="View on GitHub">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                            </a>
-                        </div>
-                        <p class="description">
-                            Skill-based wagering layered on the competitive video games people already play.
-                        </p>
-                    </div>
-
-                    <div class="project">
-                        <a href="https://x.com/shreyanshmisra6/status/2053596201849651491?s=20" target="_blank" rel="noopener noreferrer" class="project-image-link">
-                            <img src="static/projects/datafest.jpg" alt="Social Barriers in Healthcare - ASA Five College Datafest Best in Group" class="project-image" loading="lazy">
-                        </a>
-                        <div class="project-header">
-                            <h3>Social Barriers in Healthcare (ASA Five College Datafest Best in Group)</h3>
-                            <a href="https://www.science.smith.edu/datafest/" target="_blank" rel="noopener noreferrer" class="project-github-icon" aria-label="Read the news article">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg>
-                            </a>
-                        </div>
-                        <p class="description">
-                            Exploratory data analysis examining social and structural barriers to healthcare access.
-                        </p>
-                    </div>
-
-                    <div class="project">
-                        <a href="https://github.com/ShreyanshMisra/airbnb/blob/main/report.pdf" target="_blank" rel="noopener noreferrer" class="project-image-link">
-                            <img src="static/projects/airbnb.jpg" alt="Airbnb NYC" class="project-image" loading="lazy">
-                        </a>
-                        <div class="project-header">
-                            <h3><a href="https://github.com/ShreyanshMisra/airbnb/blob/main/report.pdf" target="_blank" rel="noopener noreferrer">Airbnb NYC</a></h3>
-                            <a href="https://github.com/ShreyanshMisra/airbnb" target="_blank" rel="noopener noreferrer" class="project-github-icon" aria-label="View on GitHub">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                            </a>
-                        </div>
-                        <p class="description">
-                            Airbnb price prediction and host strategy optimization using ensemble ML, geospatial features, SHAP, and grid-search.
-                        </p>
-                    </div>
-
+        <main id="top">
+            <section class="intro" id="about">
+                <p class="section-index" aria-hidden="true">01</p>
+                <div class="intro-title">
+                    <h1>Hi, I’m Shrey.</h1>
+                </div>
+                <div class="intro-copy">
+                    <p>Contact me at <a href="mailto:shreymisra26@gmail.com">shreymisra26@gmail.com</a>.</p>
+                    <p>I studied Data Science and Mathematics at UMass Amherst. I've previously interned at <a href="https://www.sw.siemens.com/en-US/" target="_blank" rel="noopener noreferrer">Siemens Digital Industries</a> and <a href="https://altair.com/" target="_blank" rel="noopener noreferrer">Altair Engineering</a>. I also co-led <a href="https://www.buildumass.com/" target="_blank" rel="noopener noreferrer">BUILD UMass</a>, a 65+ member engineering organization creating software for nonprofits.</p>
                 </div>
             </section>
+
+            <section class="work-section" id="ventures">
+                <div class="section-heading">
+                    <p class="section-index" aria-hidden="true">02</p>
+                    <p class="eyebrow">Ventures</p>
+                </div>
+                <div class="projects-grid ventures-grid">
+                    <article class="project-card">
+                        <a href="https://runeconomy.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-image-link" aria-label="Visit the RunEconomy website">
+                            <img src="static/projects/runeconomy-landing.png" alt="RunEconomy landing page" class="project-image" loading="lazy">
+                            <span class="image-action">Visit site</span>
+                        </a>
+                        <div class="project-meta">
+                            <div><h2>RunEconomy</h2><p>Find inference waste in multi-step agent workflows, then verify improvements with controlled experiments.</p></div>
+                            <div class="project-links">
+                                <a href="https://github.com/ShreyanshMisra/runeconomy" target="_blank" rel="noopener noreferrer" aria-label="RunEconomy on GitHub" title="GitHub"><svg><use href="#icon-github"></use></svg></a>
+                                <a href="https://pypi.org/project/runeconomy/" target="_blank" rel="noopener noreferrer" aria-label="RunEconomy on PyPI" title="PyPI"><svg><use href="#icon-package"></use></svg></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <a href="https://www.dueloro.com/" target="_blank" rel="noopener noreferrer" class="project-image-link" aria-label="Visit the Dueloro website">
+                            <img src="static/projects/dueloro-landing.png" alt="Dueloro landing page" class="project-image" loading="lazy">
+                            <span class="image-action">Visit site</span>
+                        </a>
+                        <div class="project-meta">
+                            <div><h2>Money Match <span>by Dueloro</span></h2><p>Skill-based wagering on the competitive video games you already play.</p></div>
+                            <div class="project-links">
+                                <a href="https://github.com/ShreyanshMisra/moneymatch" target="_blank" rel="noopener noreferrer" aria-label="Money Match on GitHub" title="GitHub"><svg><use href="#icon-github"></use></svg></a>
+                                <a href="https://www.dueloro.com/MoneyMatch%20Deck.pdf" target="_blank" rel="noopener noreferrer" aria-label="Money Match pitch deck" title="Pitch deck"><svg><use href="#icon-file"></use></svg></a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="work-section" id="projects">
+                <div class="section-heading">
+                    <p class="section-index" aria-hidden="true">03</p>
+                    <p class="eyebrow">Projects</p>
+                </div>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="project-image-link project-image-static"><img src="static/projects/kapok.jpg" alt="Kapok disaster response app interface" class="project-image" loading="lazy"></div>
+                        <div class="project-meta">
+                            <div><h2>Kapok</h2><p>Mobile app for coordinating disaster response teams, handed off to the RN Response Network (National Nurses United).</p></div>
+                            <div class="project-links"><a href="https://github.com/ShreyanshMisra/Kapok" target="_blank" rel="noopener noreferrer" aria-label="Kapok on GitHub" title="GitHub"><svg><use href="#icon-github"></use></svg></a></div>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <a href="https://incidentagent.onrender.com/" target="_blank" rel="noopener noreferrer" class="project-image-link" aria-label="Visit IncidentAgent"><img src="static/projects/incident.jpg" alt="IncidentAgent interface" class="project-image" loading="lazy"><span class="image-action">Visit site</span></a>
+                        <div class="project-meta">
+                            <div><h2>IncidentAgent</h2><p>AI agent that triages alerts, investigates signals, and surfaces likely incident root causes of production outages.</p></div>
+                            <div class="project-links"><a href="https://github.com/ShreyanshMisra/IncidentAgent" target="_blank" rel="noopener noreferrer" aria-label="IncidentAgent on GitHub" title="GitHub"><svg><use href="#icon-github"></use></svg></a></div>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <a href="https://floralinkmcp.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-image-link" aria-label="Visit FloraLink MCP"><img src="static/projects/floralink.jpg" alt="FloraLink MCP map interface" class="project-image" loading="lazy"><span class="image-action">Visit site</span></a>
+                        <div class="project-meta">
+                            <div><h2>FloraLink MCP</h2><p>An agent-assisted biodiversity app that turns field observations into structured, human-verified data.</p></div>
+                            <div class="project-links"><a href="https://github.com/ShreyanshMisra/floralink" target="_blank" rel="noopener noreferrer" aria-label="FloraLink MCP on GitHub" title="GitHub"><svg><use href="#icon-github"></use></svg></a></div>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <a href="https://flavours-neo4j.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-image-link" aria-label="Visit Flavor Pairing Knowledge Graph"><img src="static/projects/graph.jpg" alt="Flavor Pairing Knowledge Graph interface" class="project-image" loading="lazy"><span class="image-action">Visit site</span></a>
+                        <div class="project-meta">
+                            <div><h2>Flavor Pairing Knowledge Graph</h2><p>A graph of ingredients, flavor compounds, and pairing relationships based on shared chemistry.</p></div>
+                            <div class="project-links"><a href="https://github.com/ShreyanshMisra/flavours" target="_blank" rel="noopener noreferrer" aria-label="Flavor Pairing Knowledge Graph on GitHub" title="GitHub"><svg><use href="#icon-github"></use></svg></a></div>
+                        </div>
+                    </article>
+                </div>
+
+                <button class="more-toggle" type="button" aria-expanded="false" aria-controls="more-projects"><span class="toggle-mark" aria-hidden="true"></span><span>Show more work</span></button>
+                <div class="more-projects-panel" id="more-projects" aria-hidden="true" inert>
+                    <div class="more-projects-inner">
+                        <div class="projects-grid more-grid">
+                            <article class="project-card">
+                                <a href="https://clauselegal.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-image-link" aria-label="Visit Clause"><img src="static/projects/clause.jpg" alt="Clause contract analysis interface" class="project-image" loading="lazy"><span class="image-action">Visit site</span></a>
+                                <div class="project-meta">
+                                    <div><h2>Clause <span>(Best AI Hack @ HackUMass)</span></h2><p>AI-powered contract management platform that detects illegal clauses in legal agreements.</p></div>
+                                    <div class="project-links"><a href="https://github.com/ShreyanshMisra/clause" target="_blank" rel="noopener noreferrer" aria-label="Clause on GitHub" title="GitHub"><svg><use href="#icon-github"></use></svg></a></div>
+                                </div>
+                            </article>
+                            <article class="project-card">
+                                <a href="https://x.com/shreyanshmisra6/status/2053596201849651491?s=20" target="_blank" rel="noopener noreferrer" class="project-image-link" aria-label="View the Social Barriers in Healthcare project"><img src="static/projects/datafest.jpg" alt="Social Barriers in Healthcare presentation" class="project-image" loading="lazy"><span class="image-action">View project</span></a>
+                                <div class="project-meta">
+                                    <div><h2>Social Barriers in Healthcare <span>(Best in Group @ Five College Datafest)</span></h2><p>An award-winning analysis of social and structural barriers to healthcare access.</p></div>
+                                    <div class="project-links"><a href="https://github.com/ShreyanshMisra/patient-journey" target="_blank" rel="noopener noreferrer" aria-label="Social Barriers in Healthcare on GitHub" title="GitHub"><svg><use href="#icon-github"></use></svg></a></div>
+                                </div>
+                            </article>
+                            <article class="project-card">
+                                <a href="https://github.com/ShreyanshMisra/airbnb/blob/main/report.pdf" target="_blank" rel="noopener noreferrer" class="project-image-link" aria-label="Read the Airbnb NYC project report"><img src="static/projects/airbnb.jpg" alt="Airbnb NYC analysis" class="project-image" loading="lazy"><span class="image-action">Read report</span></a>
+                                <div class="project-meta">
+                                    <div><h2>NYC Airbnb Price Prediction &amp; Host Strategy</h2><p>Enhanced 49,000+ NYC listings with Census and geospatial features, then built a stacked price-prediction pipeline and grid-search optimizer after benchmarking linear, tree-based, and PyTorch models.</p></div>
+                                    <div class="project-links"><a href="https://github.com/ShreyanshMisra/airbnb" target="_blank" rel="noopener noreferrer" aria-label="Airbnb NYC on GitHub" title="GitHub"><svg><use href="#icon-github"></use></svg></a></div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact" id="contact">
+                <p class="section-index" aria-hidden="true">04</p>
+                <div><p class="eyebrow">Contact</p></div>
+                <div class="contact-copy">
+                    <p>I'm always happy to talk about products that impact people and change the world.</p>
+                    <a class="email-link" href="mailto:shreymisra26@gmail.com">shreymisra26@gmail.com</a>
+                </div>
+            </section>
+            <footer><span>Shreyansh Misra</span></footer>
         </main>
     </div>
 
     <script>
+        var root = document.documentElement;
         document.querySelector('.theme-toggle').addEventListener('click', function () {
-            var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-            document.documentElement.setAttribute('data-theme', next);
+            var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            root.setAttribute('data-theme', next);
             localStorage.setItem('theme', next);
         });
+
+        var toggle = document.querySelector('.more-toggle');
+        var morePanel = document.querySelector('.more-projects-panel');
+        toggle.addEventListener('click', function () {
+            var isOpen = toggle.getAttribute('aria-expanded') === 'true';
+            toggle.setAttribute('aria-expanded', String(!isOpen));
+            toggle.querySelector('span:last-child').textContent = isOpen ? 'Show more work' : 'Show less work';
+            morePanel.classList.toggle('is-open', !isOpen);
+            morePanel.setAttribute('aria-hidden', String(isOpen));
+            if (isOpen) morePanel.setAttribute('inert', '');
+            else morePanel.removeAttribute('inert');
+        });
+
+        var navLinks = Array.from(document.querySelectorAll('.nav-link'));
+        var observedSections = navLinks.map(function (link) { return document.querySelector(link.getAttribute('href')); });
+        var navTicking = false;
+        function updateActiveNav() {
+            var activeId = observedSections[0].id;
+            var readingLine = window.scrollY + window.innerHeight * 0.35;
+
+            observedSections.forEach(function (section) {
+                if (section.offsetTop <= readingLine) activeId = section.id;
+            });
+
+            if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 8) {
+                activeId = 'contact';
+            }
+
+            navLinks.forEach(function (link) {
+                link.classList.toggle('is-active', link.getAttribute('href') === '#' + activeId);
+            });
+            navTicking = false;
+        }
+
+        window.addEventListener('scroll', function () {
+            if (navTicking) return;
+            navTicking = true;
+            window.requestAnimationFrame(updateActiveNav);
+        }, { passive: true });
+        window.addEventListener('resize', updateActiveNav);
+        updateActiveNav();
     </script>
 </body>
 </html>
