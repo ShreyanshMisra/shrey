@@ -174,12 +174,11 @@ section, footer { max-width: 1180px; margin: 0 auto; }
 }
 .intro h1 {
     max-width: 540px;
-    margin-top: 18px;
     color: var(--ink);
-    font-size: clamp(2.2rem, 4vw, 4.4rem);
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
     font-weight: 500;
-    letter-spacing: -0.055em;
-    line-height: 0.99;
+    letter-spacing: -0.045em;
+    line-height: 1.05;
     text-wrap: balance;
 }
 .intro-copy {
@@ -207,12 +206,11 @@ section, footer { max-width: 1180px; margin: 0 auto; }
 }
 .section-heading {
     display: grid;
-    grid-template-columns: 44px minmax(140px, 0.7fr) 1.3fr;
+    grid-template-columns: 44px 1fr;
     gap: clamp(28px, 4vw, 70px);
     align-items: baseline;
     margin-bottom: 44px;
 }
-.section-note { color: var(--muted); font-size: 0.82rem; }
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -415,7 +413,7 @@ footer {
     .site-nav { justify-content: flex-start; gap: 11px; overflow-x: auto; }
     .nav-link { font-size: 0.66rem; }
     .intro, .work-section, .contact { padding-left: 20px; padding-right: 20px; }
-    .intro h1 { font-size: clamp(2.45rem, 13vw, 3.8rem); }
+    .intro h1 { font-size: 2.2rem; }
     .projects-grid { grid-template-columns: 1fr; }
     .project-meta p { font-size: 0.82rem; }
     footer { padding-left: 20px; padding-right: 20px; gap: 20px; }
