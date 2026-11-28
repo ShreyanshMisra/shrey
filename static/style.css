@@ -182,18 +182,18 @@ section, footer { max-width: 1180px; margin: 0 auto; }
 }
 .intro-copy a:hover,
 .email-link:hover { color: var(--accent); text-decoration-color: var(--accent); }
-.inline-social-link {
-    width: 1.35em;
-    height: 1.35em;
+.intro-copy .inline-social-link {
+    width: 1.2em;
+    height: 1.2em;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin: 0 0.08em;
-    color: var(--ink);
+    margin: 0 0.04em;
+    color: var(--muted);
     text-decoration: none;
-    vertical-align: -0.24em;
+    vertical-align: -0.16em;
 }
-.inline-social-link svg { width: 1em; height: 1em; fill: currentColor; }
+.inline-social-link svg { width: 15px; height: 15px; fill: currentColor; }
 
 .work-section {
     padding: 92px clamp(36px, 6vw, 92px) 110px;
